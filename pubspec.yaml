@@ -1,0 +1,22 @@
+name: ibmc_blood_metabograms
+version: 1.0.0
+description: "Program for analyze blood metabograms by IBMC"
+publish_to: 'none'
+
+dependencies:
+  get_it: ^7.7.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.5
+  sentry_flutter: ^8.1.0
+  shared_preferences: ^2.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+flutter:
+  uses-material-design: true
