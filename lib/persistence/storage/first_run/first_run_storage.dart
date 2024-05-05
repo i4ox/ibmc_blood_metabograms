@@ -1,4 +1,4 @@
-import 'package:ibmc_blood_metobograms/persistence/storage/first_run/i_first_run_storage.dart';
+import 'package:ibmc_blood_metabograms/persistence/storage/first_run/i_first_run_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Repository for working with first app status
