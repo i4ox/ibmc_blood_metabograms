@@ -3,7 +3,6 @@ import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_palette.dart';
 
 /// Ibmc brand color scheme
 class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
-
   /// Can be used as an accent color for buttons, switches, labels, icons, etc.
   final Color primary;
 
@@ -65,26 +64,26 @@ class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
   final Color textFieldHelper;
 
   IbmcColorScheme.light()
-  : primary = IbmcColorPalette.blue,
-    onPrimary = IbmcColorPalette.white,
-    secondary = IbmcColorPalette.orange,
-    onSecondary = IbmcColorPalette.white,
-    surface = IbmcColorPalette.white,
-    surfaceSecondary = IbmcColorPalette.darkestWhite,
-    onSurface = IbmcColorPalette.dark,
-    background = IbmcColorPalette.white,
-    backgroundSecondary = IbmcColorPalette.darkestWhite,
-    onBackground = IbmcColorPalette.dark,
-    danger = IbmcColorPalette.red,
-    dangerSecondary = IbmcColorPalette.lighterRed,
-    onDanger = IbmcColorPalette.white,
-    inactive = IbmcColorPalette.lightGrey,
-    positive = IbmcColorPalette.green,
-    onPositive = IbmcColorPalette.white,
-    shimmer = IbmcColorPalette.lightGrey,
-    textField = IbmcColorPalette.dark,
-    textFieldLabel = IbmcColorPalette.dark,
-    textFieldHelper = IbmcColorPalette.dark.withOpacity(0.5);
+      : primary = IbmcColorPalette.blue,
+        onPrimary = IbmcColorPalette.white,
+        secondary = IbmcColorPalette.orange,
+        onSecondary = IbmcColorPalette.white,
+        surface = IbmcColorPalette.white,
+        surfaceSecondary = IbmcColorPalette.darkestWhite,
+        onSurface = IbmcColorPalette.dark,
+        background = IbmcColorPalette.white,
+        backgroundSecondary = IbmcColorPalette.darkestWhite,
+        onBackground = IbmcColorPalette.dark,
+        danger = IbmcColorPalette.red,
+        dangerSecondary = IbmcColorPalette.lighterRed,
+        onDanger = IbmcColorPalette.white,
+        inactive = IbmcColorPalette.lightGrey,
+        positive = IbmcColorPalette.green,
+        onPositive = IbmcColorPalette.white,
+        shimmer = IbmcColorPalette.lightGrey,
+        textField = IbmcColorPalette.dark,
+        textFieldLabel = IbmcColorPalette.dark,
+        textFieldHelper = IbmcColorPalette.dark.withOpacity(0.5);
 
   // ignore: unused_element
   const IbmcColorScheme._({
@@ -158,7 +157,8 @@ class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
   }
 
   @override
-  ThemeExtension<IbmcColorScheme> lerp(covariant ThemeExtension<IbmcColorScheme>? other, double t) {
+  ThemeExtension<IbmcColorScheme> lerp(
+      covariant ThemeExtension<IbmcColorScheme>? other, double t) {
     if (other is! IbmcColorScheme) return this;
 
     return IbmcColorScheme._(
@@ -167,10 +167,12 @@ class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
       secondary: Color.lerp(secondary, other.secondary, t)!,
       onSecondary: Color.lerp(onSecondary, other.onSecondary, t)!,
       surface: Color.lerp(surface, other.surface, t)!,
-      surfaceSecondary: Color.lerp(surfaceSecondary, other.surfaceSecondary, t)!,
+      surfaceSecondary:
+          Color.lerp(surfaceSecondary, other.surfaceSecondary, t)!,
       onSurface: Color.lerp(onSurface, other.onSurface, t)!,
       background: Color.lerp(background, other.background, t)!,
-      backgroundSecondary: Color.lerp(backgroundSecondary, other.backgroundSecondary, t)!,
+      backgroundSecondary:
+          Color.lerp(backgroundSecondary, other.backgroundSecondary, t)!,
       onBackground: Color.lerp(onBackground, other.onBackground, t)!,
       danger: Color.lerp(danger, other.danger, t)!,
       dangerSecondary: Color.lerp(dangerSecondary, other.dangerSecondary, t)!,
@@ -186,5 +188,6 @@ class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
   }
 
   /// Returns [IbmcColorScheme] from [context]
-  static IbmcColorScheme of(BuildContext context) => Theme.of(context).extension<IbmcColorScheme>()!;
+  static IbmcColorScheme of(BuildContext context) =>
+      Theme.of(context).extension<IbmcColorScheme>()!;
 }

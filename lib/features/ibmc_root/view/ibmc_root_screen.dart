@@ -16,7 +16,7 @@ class IbmcRootScreen extends StatelessWidget {
         IbmcProfileRoute(),
         IbmcSettingsRoute(),
       ],
-      bottomNavigationBuilder: (_,tabsRouter) {
+      bottomNavigationBuilder: (_, tabsRouter) {
         return IbmcBottomNavigationBar(
           tabsRouter: tabsRouter,
         );

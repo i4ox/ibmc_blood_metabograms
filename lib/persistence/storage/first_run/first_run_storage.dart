@@ -15,5 +15,4 @@ class FirstRunStorage implements IFirstRunStorage {
   Future<void> setIsFirstRun({required bool value}) async {
     await getIt<SharedPreferences>().setBool(_firstRunKey, value);
   }
-  
 }

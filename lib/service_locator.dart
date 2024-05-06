@@ -7,7 +7,6 @@ final getIt = GetIt.I;
 
 /// Register the services
 Future<void> registerServices() async {
-  
   // Shared preferences
   final sharedPreferences = await SharedPreferences.getInstance();
   getIt.registerLazySingleton(() => sharedPreferences);

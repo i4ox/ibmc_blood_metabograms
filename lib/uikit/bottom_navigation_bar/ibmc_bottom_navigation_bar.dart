@@ -2,7 +2,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 class IbmcBottomNavigationBar extends StatelessWidget {
-  
   final TabsRouter tabsRouter;
 
   const IbmcBottomNavigationBar({
@@ -18,7 +17,7 @@ class IbmcBottomNavigationBar extends StatelessWidget {
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          label: "Home", 
+          label: "Home",
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.monitor_heart),

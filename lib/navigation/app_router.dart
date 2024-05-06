@@ -12,28 +12,28 @@ part 'app_router.gr.dart';
 class AppRouter extends _$AppRouter {
   @override
   List<AutoRoute> get routes => [
-    AutoRoute(
-      page: IbmcRootRoute.page,
-      path: AppRoutePaths.rootPath,
-      initial: true,
-      children: [
         AutoRoute(
-          page: IbmcHomeRoute.page,
-          path: AppRoutePaths.homePath,
+          page: IbmcRootRoute.page,
+          path: AppRoutePaths.rootPath,
+          initial: true,
+          children: [
+            AutoRoute(
+              page: IbmcHomeRoute.page,
+              path: AppRoutePaths.homePath,
+            ),
+            AutoRoute(
+              page: IbmcAnalysisRoute.page,
+              path: AppRoutePaths.analysisPath,
+            ),
+            AutoRoute(
+              page: IbmcProfileRoute.page,
+              path: AppRoutePaths.usersPath,
+            ),
+            AutoRoute(
+              page: IbmcSettingsRoute.page,
+              path: AppRoutePaths.settingsPath,
+            ),
+          ],
         ),
-        AutoRoute(
-          page: IbmcAnalysisRoute.page,
-          path: AppRoutePaths.analysisPath,
-        ),
-        AutoRoute(
-          page: IbmcProfileRoute.page,
-          path: AppRoutePaths.usersPath,
-        ),
-        AutoRoute(
-          page: IbmcSettingsRoute.page,
-          path: AppRoutePaths.settingsPath,
-        ),
-      ],
-    ),
-  ];
+      ];
 }

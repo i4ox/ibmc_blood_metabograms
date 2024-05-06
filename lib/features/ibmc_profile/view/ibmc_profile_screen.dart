@@ -6,7 +6,7 @@ class IbmcProfileScreen extends StatefulWidget {
   const IbmcProfileScreen({super.key});
 
   @override
-  State<IbmcProfileScreen> createState() =>_IbmcProfileScreenState();
+  State<IbmcProfileScreen> createState() => _IbmcProfileScreenState();
 }
 
 class _IbmcProfileScreenState extends State<IbmcProfileScreen> {

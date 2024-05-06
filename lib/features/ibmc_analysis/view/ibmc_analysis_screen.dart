@@ -6,7 +6,7 @@ class IbmcAnalysisScreen extends StatefulWidget {
   const IbmcAnalysisScreen({super.key});
 
   @override
-  State<IbmcAnalysisScreen> createState() =>_IbmcAnalysisScreenState();
+  State<IbmcAnalysisScreen> createState() => _IbmcAnalysisScreenState();
 }
 
 class _IbmcAnalysisScreenState extends State<IbmcAnalysisScreen> {
