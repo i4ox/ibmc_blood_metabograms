@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ibmc_blood_metabograms/navigation/app_router.dart';
+import 'package:ibmc_blood_metabograms/uikit/theme/ibmc_theme_data.dart';
 
 /// Application widget
 class IbmcBloodMetabogramsApplication extends StatefulWidget {
@@ -17,6 +18,8 @@ class _IbmcBloodMetabogramsApplicationState extends State<IbmcBloodMetabogramsAp
   Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: _appRouter.config(),
+      theme: IbmcThemeData.lightTheme,
+      themeMode: ThemeMode.light,
     );    
   }
 }

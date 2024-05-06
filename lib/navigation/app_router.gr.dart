@@ -15,13 +15,51 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    IbmcAnalysisRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const IbmcAnalysisScreen(),
+      );
+    },
     IbmcHomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const IbmcHomeScreen(),
       );
-    }
+    },
+    IbmcProfileRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const IbmcProfileScreen(),
+      );
+    },
+    IbmcRootRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const IbmcRootScreen(),
+      );
+    },
+    IbmcSettingsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const IbmcSettingsScreen(),
+      );
+    },
   };
+}
+
+/// generated route for
+/// [IbmcAnalysisScreen]
+class IbmcAnalysisRoute extends PageRouteInfo<void> {
+  const IbmcAnalysisRoute({List<PageRouteInfo>? children})
+      : super(
+          IbmcAnalysisRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'IbmcAnalysisRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -34,6 +72,48 @@ class IbmcHomeRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'IbmcHomeRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [IbmcProfileScreen]
+class IbmcProfileRoute extends PageRouteInfo<void> {
+  const IbmcProfileRoute({List<PageRouteInfo>? children})
+      : super(
+          IbmcProfileRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'IbmcProfileRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [IbmcRootScreen]
+class IbmcRootRoute extends PageRouteInfo<void> {
+  const IbmcRootRoute({List<PageRouteInfo>? children})
+      : super(
+          IbmcRootRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'IbmcRootRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [IbmcSettingsScreen]
+class IbmcSettingsRoute extends PageRouteInfo<void> {
+  const IbmcSettingsRoute({List<PageRouteInfo>? children})
+      : super(
+          IbmcSettingsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'IbmcSettingsRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
