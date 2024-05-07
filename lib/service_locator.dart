@@ -7,7 +7,7 @@ final getIt = GetIt.I;
 
 /// Register the services
 Future<void> registerServices() async {
-  // Shared preferences
+  // Shared preferences and NSUserDefaults wrapper
   final sharedPreferences = await SharedPreferences.getInstance();
   getIt.registerLazySingleton(() => sharedPreferences);
 

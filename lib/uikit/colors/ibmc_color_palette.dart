@@ -19,6 +19,12 @@ abstract class IbmcColorPalette {
   static Color white = Color(0xFFF9F9F9);
 
   static Color darkestWhite = Color(0xFFEAEAEA);
+
+  static Color lightBlue = Color(0xFF8BC4F0);
+
+  static Color pink = Color(0xFFF7B1BC);
+
+  static Color purple = Color(0xFFBABCF3);
 }
 
 /// Application dark colors palette

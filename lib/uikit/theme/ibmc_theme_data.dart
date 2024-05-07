@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_scheme.dart';
+import 'package:ibmc_blood_metabograms/uikit/text/ibmc_text_scheme.dart';
 
 abstract class IbmcThemeData {
   // TODO: Add the dark theme
   static final _lightColorScheme = IbmcColorScheme.light();
+  static final _textScheme = IbmcTextScheme.base();
 
   static final lightTheme = ThemeData(
-    extensions: [_lightColorScheme],
+    extensions: [_lightColorScheme, _textScheme],
     brightness: Brightness.light,
     colorScheme: ColorScheme(
       brightness: Brightness.light,
