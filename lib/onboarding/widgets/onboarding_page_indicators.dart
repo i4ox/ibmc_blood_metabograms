@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/onboarding/widgets/next_button.dart';
 import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_palette.dart';
+import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_scheme.dart';
 import 'package:ibmc_blood_metabograms/uikit/text/ibmc_text_scheme.dart';
 
 class OnboardingPageIndicators extends StatefulWidget {
@@ -36,14 +36,23 @@ class _OnboardingPageIndicatorsState extends State<OnboardingPageIndicators> {
                 ? Container()
                 : TextButton(
                     onPressed: () {},
-                    child: Text("Skip", style: IbmcTextScheme.onboarding().label,),
+                    child: Text(
+                      "Пропустить",
+                      style: IbmcTextScheme.onboarding().label.copyWith(
+                        color: IbmcColorScheme.light().danger,    
+                      ),
+                    ),
                 ),
-            // Row(
-            //   children: _buildPageIndicators(widget.currentPage),
-            // ),
-            NextButton(
-              isLastPage: widget.countOfDots - 1 == widget.currentPage,
-              onClick: widget.onClick,
+            TextButton(
+              onPressed: widget.onClick,
+              child: Text(
+                widget.countOfDots - 1 == widget.currentPage
+                    ? "Начать"
+                    : "Далее",
+                style: IbmcTextScheme.onboarding().label.copyWith(
+                  color: IbmcColorScheme.light().secondary,
+                ),
+              ),
             ),
           ],
         ),

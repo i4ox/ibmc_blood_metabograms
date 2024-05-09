@@ -2,29 +2,29 @@ import 'package:flutter/material.dart';
 
 /// Application light colors palette
 abstract class IbmcColorPalette {
-  static Color blue = Color(0xFF2A2C63);
+  static Color purple = Color(0xFF9086F9);
 
-  static Color dark = Color(0xFF343434);
+  static Color darkerPurple = Color(0xFF7A6EFE);
 
-  static Color green = Color(0xFF196D21);
+  static Color white = Color(0xFFFFFFFF);
 
-  static Color lightGrey = Color(0xFFDEDEDE);
+  static Color darkerWhite = Color(0xFFE5E5E5);
 
-  static Color orange = Color(0xFFC33737);
+  static Color black = Color(0xFF111111);
 
-  static Color red = Color(0xFFAF1F12);
+  static Color lighterBlack = Color(0xFF555D63);
 
-  static Color lighterRed = Color(0xFFDC1200);
+  static Color red = Color(0xFFCE2C60);
 
-  static Color white = Color(0xFFF9F9F9);
+  static Color darkerRed = Color(0xFFB1205C);
 
-  static Color darkestWhite = Color(0xFFEAEAEA);
+  static Color yellow = Color(0xFFFFD66B);
 
-  static Color lightBlue = Color(0xFF8BC4F0);
+  static Color darkerYellow = Color(0xFFDBB04E);
 
-  static Color pink = Color(0xFFF7B1BC);
+  static Color green = Color(0xFF1C8C6E);
 
-  static Color purple = Color(0xFFBABCF3);
+  static Color grey = Color(0xFFCECECE);
 }
 
 /// Application dark colors palette

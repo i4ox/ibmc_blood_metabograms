@@ -21,6 +21,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const IbmcAnalysisScreen(),
       );
     },
+    IbmcHomeRoutesRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const IbmcHomeRoutesScreen(),
+      );
+    },
     IbmcHomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -58,6 +64,20 @@ class IbmcAnalysisRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'IbmcAnalysisRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [IbmcHomeRoutesScreen]
+class IbmcHomeRoutesRoute extends PageRouteInfo<void> {
+  const IbmcHomeRoutesRoute({List<PageRouteInfo>? children})
+      : super(
+          IbmcHomeRoutesRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'IbmcHomeRoutesRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

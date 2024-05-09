@@ -64,26 +64,26 @@ class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
   final Color textFieldHelper;
 
   IbmcColorScheme.light()
-      : primary = IbmcColorPalette.blue,
+      : primary = IbmcColorPalette.purple,
         onPrimary = IbmcColorPalette.white,
-        secondary = IbmcColorPalette.orange,
+        secondary = IbmcColorPalette.green,
         onSecondary = IbmcColorPalette.white,
         surface = IbmcColorPalette.white,
-        surfaceSecondary = IbmcColorPalette.darkestWhite,
-        onSurface = IbmcColorPalette.dark,
+        surfaceSecondary = IbmcColorPalette.darkerWhite,
+        onSurface = IbmcColorPalette.black,
         background = IbmcColorPalette.white,
-        backgroundSecondary = IbmcColorPalette.darkestWhite,
-        onBackground = IbmcColorPalette.dark,
+        backgroundSecondary = IbmcColorPalette.darkerWhite,
+        onBackground = IbmcColorPalette.black,
         danger = IbmcColorPalette.red,
-        dangerSecondary = IbmcColorPalette.lighterRed,
+        dangerSecondary = IbmcColorPalette.darkerRed,
         onDanger = IbmcColorPalette.white,
-        inactive = IbmcColorPalette.lightGrey,
+        inactive = IbmcColorPalette.grey,
         positive = IbmcColorPalette.green,
         onPositive = IbmcColorPalette.white,
-        shimmer = IbmcColorPalette.lightGrey,
-        textField = IbmcColorPalette.dark,
-        textFieldLabel = IbmcColorPalette.dark,
-        textFieldHelper = IbmcColorPalette.dark.withOpacity(0.5);
+        shimmer = IbmcColorPalette.grey,
+        textField = IbmcColorPalette.black,
+        textFieldLabel = IbmcColorPalette.black,
+        textFieldHelper = IbmcColorPalette.black.withOpacity(0.5);
 
   // ignore: unused_element
   const IbmcColorScheme._({

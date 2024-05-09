@@ -1,8 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:ibmc_blood_metabograms/navigation/app_router.dart';
-import 'package:ibmc_blood_metabograms/onboarding/onboarding.dart';
-import 'package:ibmc_blood_metabograms/persistence/storage/first_run/first_run_storage.dart';
 import 'package:ibmc_blood_metabograms/uikit/bottom_navigation_bar/ibmc_bottom_navigation_bar.dart';
 
 @RoutePage()
@@ -11,22 +9,18 @@ class IbmcRootScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (FirstRunStorage().getIsFirstRun()) {
-      return OnboardingScreen();
-    } else {
-      return AutoTabsScaffold(
-        routes: const [
-          IbmcHomeRoute(),
-          IbmcAnalysisRoute(),
-          IbmcProfileRoute(),
-          IbmcSettingsRoute(),
-        ],
-        bottomNavigationBuilder: (_, tabsRouter) {
-          return IbmcBottomNavigationBar(
-            tabsRouter: tabsRouter,
-          );
-        },
-      );
-    }
+    return AutoTabsScaffold(
+      routes: const [
+        IbmcHomeRoute(),
+        IbmcAnalysisRoute(),
+        IbmcProfileRoute(),
+        IbmcSettingsRoute(),
+      ],
+      bottomNavigationBuilder: (_, tabsRouter) {
+        return IbmcBottomNavigationBar(
+          tabsRouter: tabsRouter,
+        );
+      },
+    );
   }
 }
