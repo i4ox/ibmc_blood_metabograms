@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+/// Default BottomNavigationBar widget
 class IbmcBottomNavigationBar extends StatelessWidget {
   final TabsRouter tabsRouter;
 

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ibmc_blood_metabograms/constants.dart';
+import 'package:ibmc_blood_metabograms/ibmc_bloc_observer.dart';
 import 'package:ibmc_blood_metabograms/ibmc_blood_metabograms_app.dart';
 import 'package:ibmc_blood_metabograms/service_locator.dart' as di;
 import 'package:flutter/services.dart';
-// import 'package:ibmc_blood_metabograms/utils/image_utils.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
 /// Launch the application
@@ -21,12 +22,11 @@ Future<void> run() async {
 
 /// Initial services needed for correct work of application
 Future<void> _runApp() async {
-
-  // Precache the images
-  // ImageUtils.svgPrecacheImages();
-
   // Use the dependencies injection
   await di.registerServices();
+
+  // Setup the observer for bloc
+  Bloc.observer = IbmcBlocObserver();
 
   // Configure the application with Sentry for collect the feedback information
   await SentryFlutter.init(
@@ -52,6 +52,7 @@ Future<void> _runApp() async {
   ).then((value) {});
 }
 
+/// Entrypoint
 void main() {
   run();
 }

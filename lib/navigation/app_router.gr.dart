@@ -15,16 +15,16 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    ApplicationRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ApplicationScreen(),
+      );
+    },
     IbmcAnalysisRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const IbmcAnalysisScreen(),
-      );
-    },
-    IbmcHomeRoutesRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const IbmcHomeRoutesScreen(),
       );
     },
     IbmcHomeRoute.name: (routeData) {
@@ -55,6 +55,20 @@ abstract class _$AppRouter extends RootStackRouter {
 }
 
 /// generated route for
+/// [ApplicationScreen]
+class ApplicationRoute extends PageRouteInfo<void> {
+  const ApplicationRoute({List<PageRouteInfo>? children})
+      : super(
+          ApplicationRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ApplicationRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [IbmcAnalysisScreen]
 class IbmcAnalysisRoute extends PageRouteInfo<void> {
   const IbmcAnalysisRoute({List<PageRouteInfo>? children})
@@ -64,20 +78,6 @@ class IbmcAnalysisRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'IbmcAnalysisRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [IbmcHomeRoutesScreen]
-class IbmcHomeRoutesRoute extends PageRouteInfo<void> {
-  const IbmcHomeRoutesRoute({List<PageRouteInfo>? children})
-      : super(
-          IbmcHomeRoutesRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'IbmcHomeRoutesRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

@@ -5,16 +5,18 @@ import 'package:ibmc_blood_metabograms/features/ibmc_profile/ibmc_profile.dart';
 import 'package:ibmc_blood_metabograms/features/ibmc_settings/ibmc_settings.dart';
 import 'package:ibmc_blood_metabograms/navigation/app_route_paths.dart';
 import 'package:ibmc_blood_metabograms/features/ibmc_root/ibmc_root.dart';
+import 'package:ibmc_blood_metabograms/application/application.dart';
 
 part 'app_router.gr.dart';
 
+/// Global navigation for app
 @AutoRouterConfig()
 class AppRouter extends _$AppRouter {
   @override
   List<AutoRoute> get routes => [
         AutoRoute(
-          page: IbmcRootRoute.page,
-          path: AppRoutePaths.rootPath,
+          page: ApplicationRoute.page,
+          path: AppRoutePaths.applicationPath,
           initial: true,
           children: [
             AutoRoute(

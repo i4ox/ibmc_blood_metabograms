@@ -2,13 +2,13 @@ import 'package:ibmc_blood_metabograms/persistence/storage/onboarding_shown/i_on
 import 'package:ibmc_blood_metabograms/service_locator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// Repository for working with first app status
+/// Repository for working with onboarding shown status
 class OnboardingShownStorage implements IOnboardingShownStorage {
   static const String _onboardingShownKey = "first_run";
 
   @override
   bool getIsOnboardingShown() {
-    return getIt<SharedPreferences>().getBool(_onboardingShownKey) ?? true;
+    return getIt<SharedPreferences>().getBool(_onboardingShownKey) ?? false;
   }
 
   @override

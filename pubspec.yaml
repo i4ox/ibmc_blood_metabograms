@@ -9,6 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.5
+  logger: ^2.2.0
   sentry_flutter: ^8.1.0
   shared_preferences: ^2.2.3
 

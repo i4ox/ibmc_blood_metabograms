@@ -1,4 +1,8 @@
 abstract class AppRoutePaths {
+
+  /// Path to application entrypoint
+  static const applicationPath = '/';
+
   /// Path to screen with all UiKit elements
   static const uikitPath = '/uikit';
 
@@ -7,9 +11,6 @@ abstract class AppRoutePaths {
 
   /// Path to home screen
   static const homePath = 'home';
-
-  /// Path to default screen
-  static const rootPath = '/';
 
   /// Path to users screen
   static const usersPath = 'users';

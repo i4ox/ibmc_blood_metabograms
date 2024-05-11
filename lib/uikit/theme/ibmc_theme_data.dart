@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_scheme.dart';
 import 'package:ibmc_blood_metabograms/uikit/text/ibmc_text_scheme.dart';
 
+/// Global theme for app
 abstract class IbmcThemeData {
   // TODO: Add the dark theme
   static final _lightColorScheme = IbmcColorScheme.light();

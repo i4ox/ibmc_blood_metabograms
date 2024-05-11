@@ -1,8 +1,8 @@
 /// Repository interface for working with onboarding status.
 abstract class IOnboardingShownStorage {
-  /// Return is a first run app
+  /// Return is a onboarding shown
   bool getIsOnboardingShown();
 
-  /// Save first run app
+  /// Save onboarding shown option
   Future<void> setIsOnboardingShown({required bool value});
 }

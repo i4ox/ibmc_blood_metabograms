@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ibmc_blood_metabograms/application/cubit/application_cubit.dart';
+import 'package:ibmc_blood_metabograms/service_locator.dart';
 import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_palette.dart';
 import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_scheme.dart';
 import 'package:ibmc_blood_metabograms/uikit/text/ibmc_text_scheme.dart';
@@ -35,7 +37,9 @@ class _OnboardingPageIndicatorsState extends State<OnboardingPageIndicators> {
             widget.countOfDots - 1 == widget.currentPage
                 ? Container()
                 : TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      getIt<ApplicationCubit>().closeOnboarding();
+                    },
                     child: Text(
                       "Пропустить",
                       style: IbmcTextScheme.onboarding().label.copyWith(
@@ -43,17 +47,25 @@ class _OnboardingPageIndicatorsState extends State<OnboardingPageIndicators> {
                       ),
                     ),
                 ),
-            TextButton(
-              onPressed: widget.onClick,
-              child: Text(
-                widget.countOfDots - 1 == widget.currentPage
-                    ? "Начать"
-                    : "Далее",
-                style: IbmcTextScheme.onboarding().label.copyWith(
-                  color: IbmcColorScheme.light().secondary,
-                ),
-              ),
-            ),
+            widget.countOfDots - 1 != widget.currentPage
+                ? TextButton(
+                    onPressed: widget.onClick,
+                    child: Text(
+                      "Далее",
+                      style: IbmcTextScheme.onboarding().label.copyWith(
+                        color: IbmcColorScheme.light().secondary,
+                      ),
+                    ),
+                  )
+                : TextButton(
+                    onPressed: () => getIt<ApplicationCubit>().closeOnboarding(),
+                    child: Text(
+                      "Начать",
+                      style: IbmcTextScheme.onboarding().label.copyWith(
+                        color: IbmcColorScheme.light().secondary,
+                      ),  
+                    ),
+                  ),
           ],
         ),
       ),
