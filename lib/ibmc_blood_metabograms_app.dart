@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/constants.dart';
-import 'package:ibmc_blood_metabograms/navigation/app_router.dart';
-import 'package:ibmc_blood_metabograms/service_locator.dart';
-import 'package:ibmc_blood_metabograms/uikit/theme/ibmc_theme_data.dart';
+import 'package:ibmc_blood_metabograms/app/app.dart';
 
 /// Application widget
 class IbmcBloodMetabogramsApplication extends StatefulWidget {
@@ -18,11 +15,6 @@ class _IbmcBloodMetabogramsApplicationState
     extends State<IbmcBloodMetabogramsApplication> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: Constants.environmentType == "debug" ? true : false,
-      routerConfig: getIt<AppRouter>().config(),
-      theme: IbmcThemeData.lightTheme,
-      themeMode: ThemeMode.light,
-    );
+    return App();
   }
 }

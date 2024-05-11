@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/application/cubit/application_cubit.dart';
+import 'package:go_router/go_router.dart';
+import 'package:ibmc_blood_metabograms/home/home.dart';
 import 'package:ibmc_blood_metabograms/service_locator.dart';
 import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_palette.dart';
 import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_scheme.dart';
@@ -38,7 +39,8 @@ class _OnboardingPageIndicatorsState extends State<OnboardingPageIndicators> {
                 ? Container()
                 : TextButton(
                     onPressed: () {
-                      getIt<ApplicationCubit>().closeOnboarding();
+                      getIt<HomeBloc>().add(HomeCloseOnboarding());
+                      context.go('/dashboard');
                     },
                     child: Text(
                       "Пропустить",
@@ -58,7 +60,10 @@ class _OnboardingPageIndicatorsState extends State<OnboardingPageIndicators> {
                     ),
                   )
                 : TextButton(
-                    onPressed: () => getIt<ApplicationCubit>().closeOnboarding(),
+                    onPressed: () {
+                      getIt<HomeBloc>().add(HomeCloseOnboarding());
+                      context.go('/dashboard');
+                    },
                     child: Text(
                       "Начать",
                       style: IbmcTextScheme.onboarding().label.copyWith(

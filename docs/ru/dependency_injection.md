@@ -24,3 +24,4 @@ _prefs.getBool("first_run");
 
 1. registerSingleton - единичная регистрация(создается сразу)
 2. registerLazySingleton - единичная регистрация(создается на момент первого вызова)
+3. registerFactory - регистрация каждый раз, когда происходит вызов

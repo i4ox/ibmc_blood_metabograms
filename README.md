@@ -7,10 +7,11 @@
 - [ ] Analytics(Firebase)
 - [X] Crashlytics(Sentry)
 - [X] Onboarding(Self-code)
-- [ ] Logger
+- [X] Navigation(Self-code)
+- [X] Logger
 - [ ] Auth(Appwrite)
-- [ ] Bloc integration
-- [ ] Main page
+- [X] Bloc integration
+- [ ] Dashboard page
 - [ ] Analyse page
 - [ ] Profile page
 - [ ] Settings page
