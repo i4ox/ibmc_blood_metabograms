@@ -6,6 +6,8 @@
 - [X] Dependency Injection(GetIt)
 - [ ] Analytics(Firebase)
 - [X] Crashlytics(Sentry)
+- [ ] I18n and L10n
+- [ ] Responsive UI
 - [X] Onboarding(Self-code)
 - [X] Navigation(Self-code)
 - [X] Logger

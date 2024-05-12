@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:ibmc_blood_metabograms/onboarding/widgets/onboarding_page.dart';
 import 'package:ibmc_blood_metabograms/onboarding/widgets/onboarding_page_indicators.dart';
 
+/// Onboarding screen widget
 class OnboardingScreen extends StatefulWidget {
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState(); 
 }
 
+/// State for [OnboardingScreen]
 class _OnboardingScreenState extends State<OnboardingScreen> {
   final int _numPages = 3;
 

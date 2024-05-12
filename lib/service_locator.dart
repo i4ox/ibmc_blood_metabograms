@@ -1,8 +1,9 @@
 import 'package:get_it/get_it.dart';
+import 'package:ibmc_blood_metabograms/app/bloc/app_bloc.dart';
 import 'package:ibmc_blood_metabograms/config/app_config.dart';
 import 'package:ibmc_blood_metabograms/config/app_logger_config.dart';
 import 'package:ibmc_blood_metabograms/home/home.dart';
-import 'package:ibmc_blood_metabograms/navigation/routes/routes.dart';
+import 'package:ibmc_blood_metabograms/navigation/navigation.dart';
 import 'package:ibmc_blood_metabograms/util/logger/app_logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -13,6 +14,7 @@ final getIt = GetIt.I;
 Future<void> registerServices(AppConfig appConfig, AppLoggerConfig loggerConfig) async {
 
   // BLoC
+  getIt.registerFactory(() => AppBloc());
   getIt.registerFactory(() => HomeBloc());
 
   // App configuration

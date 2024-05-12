@@ -1,0 +1,12 @@
+{
+  "firstOnboardingTitle": "View analyzes",
+  "secondOnboardingTitle": "Artificial Intelligence",
+  "thirdOnboardingTitle": "Huge range of services",
+  "firstOnboardingDescription": "The app allows you to view both a quick summary of the patient's condition, as well as extremely detailed and detailed statistics based on tables and graphs,",
+  "secondOnboardingDescription": "The application supports functionality using artificial intelligence. This role is played by a specially trained BioChatGpt with an accuracy of about 87%.",
+  "thirdOnboardingDescription": "The app has many different features, from viewing analyzes to generating scientific publications using artificial intelligence based on collected analyses",
+  "dashboard": "Dashboard",
+  "analysis": "Analysis",
+  "profiles": "Profiles",
+  "settings": "Settings"
+}

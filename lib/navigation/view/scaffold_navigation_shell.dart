@@ -1,22 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:ibmc_blood_metabograms/config/s.dart';
+import 'package:ibmc_blood_metabograms/home/home.dart';
 import 'package:ibmc_blood_metabograms/uikit/bottom_navigation_bar/app_bottom_navigation_bar.dart';
 
-class ScaffoldNavigationShell extends StatelessWidget {
+/// NavigationShell with [Scaffold] for [HomeScreen]
+class ScaffoldNavigationShell extends StatefulWidget {
   const ScaffoldNavigationShell({super.key, required this.navigationShell});
 
   final StatefulNavigationShell navigationShell;
 
   @override
+  State<StatefulWidget> createState() => _ScaffoldNavigationShellState();
+}
+
+class _ScaffoldNavigationShellState extends State<ScaffoldNavigationShell> {
+  @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, state) {
         return Scaffold(
-          body: navigationShell,
+          body: widget.navigationShell,
           bottomNavigationBar: AppBottomNavigationBar(
-            currentIndex: navigationShell.currentIndex,
+            currentIndex: widget.navigationShell.currentIndex,
             onClick: (index) => _setActiveIndex(index),
-            items: _items(),
+            items: _items(context),
           ),
         );
       },
@@ -24,26 +32,26 @@ class ScaffoldNavigationShell extends StatelessWidget {
   }
 
   void _setActiveIndex(int index) {
-    navigationShell.goBranch(index, initialLocation: index == navigationShell.currentIndex);
+    widget.navigationShell.goBranch(index, initialLocation: index == widget.navigationShell.currentIndex);
   }
 
-  List<BottomNavigationBarItem> _items() {
-    return const <BottomNavigationBarItem>[
+  List<BottomNavigationBarItem> _items(BuildContext context) {
+    return <BottomNavigationBarItem>[
       BottomNavigationBarItem(
         icon: Icon(Icons.home),
-        label: "Dashboard",
+        label: S.of(context).dashboard,
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.monitor_heart),
-        label: "Analysis",
+        label: S.of(context).analysis,
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.account_circle_sharp),
-        label: "Profiles",
+        label: S.of(context).profiles,
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.settings),
-        label: "Settings",
+        label: S.of(context).settings,
       ),
     ];
   }

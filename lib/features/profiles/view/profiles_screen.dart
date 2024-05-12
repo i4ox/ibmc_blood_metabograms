@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Profiles screen widget
 class ProfilesScreen extends StatefulWidget {
   const ProfilesScreen({super.key});
 
@@ -7,6 +8,7 @@ class ProfilesScreen extends StatefulWidget {
   State<ProfilesScreen> createState() => _ProfilesScreenState();
 }
 
+/// State for [ProfilesScreen]
 class _ProfilesScreenState extends State<ProfilesScreen> {
   @override
   Widget build(BuildContext context) {

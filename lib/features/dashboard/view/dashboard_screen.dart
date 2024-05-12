@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Dashboard screen widget
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
 
@@ -7,6 +8,7 @@ class DashboardScreen extends StatefulWidget {
   State<DashboardScreen> createState() => _DashboardScreenState();
 }
 
+/// State for [DashboardScreen]
 class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {

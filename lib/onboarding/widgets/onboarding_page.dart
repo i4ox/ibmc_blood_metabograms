@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:ibmc_blood_metabograms/config/s.dart';
 import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_palette.dart';
 import 'package:ibmc_blood_metabograms/uikit/text/ibmc_text_scheme.dart';
 
 class OnboardingPage {
 
-
-  static const List<Image> containersImages = [
+  static const List<Image> _containersImages = [
     Image(
       image: AssetImage('assets/images/onboarding_1.png'),
       height: 415,
@@ -21,21 +21,6 @@ class OnboardingPage {
       height: 415,
       width: 415,
     ),
-  ];
-
-  static const titlesTexts = [
-    'Просматривай анализы',
-    'Искусственный интеллект',
-    'Огромный спектр услуг',
-  ];
-
-  static const contentTexts = [
-    '''Приложение позволяет просматривать как краткую сводку о состоянии пациента,
-    так и крайне развернутую и детальную статистику на основе таблиц и графов''',
-    '''В приложении поддерживается функционал с использованием искусственного интеллекта.
-    В роли которого выступает специально обученный BioChatGpt с точностью около 87%''',
-    '''В приложении имеется множество различных функций, от просмотра анализов до генерации
-    научных публикаций при помощи искусственного интелекта на основе собранных анализов''', 
   ];
 
   static List<Widget> build(BuildContext context, int numPages) {
@@ -54,7 +39,7 @@ class OnboardingPage {
                     left: 20.0,
                     right: 20.0,
                   ),
-                  child: containersImages[index],
+                  child: _containersImages[index],
                 ),
               ),
             ),
@@ -88,7 +73,7 @@ class OnboardingPage {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        titlesTexts[index],
+                        _getOnboardingTitle(context, index),
                         textAlign: TextAlign.center,
                         style: IbmcTextScheme.onboarding().headline.copyWith(
                           fontFamily: "PlusJakartaSans",
@@ -97,7 +82,7 @@ class OnboardingPage {
                       ),
                       const SizedBox(height: 30.0),
                       Text(
-                        contentTexts[index],
+                        _getOnboardingDescription(context, index),
                         textAlign: TextAlign.center,
                         style: IbmcTextScheme.onboarding().label.copyWith(
                           height: 2,
@@ -116,4 +101,22 @@ class OnboardingPage {
       );
     });
   }
+}
+
+String _getOnboardingTitle(BuildContext context, int index) {
+  List<String> titles = <String>[
+    S.of(context).firstOnboardingTitle,
+    S.of(context).secondOnboardingTitle,
+    S.of(context).thirdOnboardingTitle,
+  ];
+  return titles[index];
+}
+
+String _getOnboardingDescription(BuildContext context, int index) {
+  List<String> descriptions = <String>[
+    S.of(context).firstOnboardingDescription,
+    S.of(context).secondOnboardingDescription,
+    S.of(context).thirdOnboardingDescription,
+  ];
+  return descriptions[index];
 }

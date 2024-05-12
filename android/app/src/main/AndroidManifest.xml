@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="ibmc_blood_metobograms"
+        android:label="ibmc_blood_metabograms"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

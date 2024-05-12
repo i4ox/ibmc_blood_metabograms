@@ -5,7 +5,7 @@ import 'package:ibmc_blood_metabograms/features/dashboard/dashboard.dart';
 import 'package:ibmc_blood_metabograms/features/profiles/profiles.dart';
 import 'package:ibmc_blood_metabograms/features/settings/settings.dart';
 import 'package:ibmc_blood_metabograms/home/home.dart';
-import 'package:ibmc_blood_metabograms/navigation/view/scaffold_navigation_shell.dart';
+import 'package:ibmc_blood_metabograms/navigation/navigation.dart';
 import 'package:ibmc_blood_metabograms/onboarding/onboarding.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -14,7 +14,7 @@ final GlobalKey<NavigatorState> _analysisNavigatorKey = GlobalKey<NavigatorState
 final GlobalKey<NavigatorState> _profilesNavigatorKey = GlobalKey<NavigatorState>();
 final GlobalKey<NavigatorState> _settingsNavigatorKey = GlobalKey<NavigatorState>();
 
-
+/// Create router for app
 GoRouter createRouter() => GoRouter(
   navigatorKey: _rootNavigatorKey,
   initialLocation: '/home',

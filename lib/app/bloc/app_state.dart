@@ -1,5 +1,6 @@
 part of 'app_bloc.dart';
 
+/// State for [AppBloc]
 abstract class AppState extends Equatable {
   const AppState();
 

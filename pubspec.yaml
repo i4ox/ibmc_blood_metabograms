@@ -9,7 +9,11 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.5
+  flutter_localizations:
+    sdk: flutter
   logger: ^2.2.0
+  intl: ^0.18.1
+  provider: ^6.1.2
   sentry_flutter: ^8.1.0
   shared_preferences: ^2.2.3
 
@@ -23,6 +27,7 @@ environment:
 
 flutter:
   uses-material-design: true
+  generate: true
   assets:
     - assets/images/
   fonts:

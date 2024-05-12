@@ -19,24 +19,7 @@ class AppBottomNavigationBar extends StatelessWidget {
     return BottomNavigationBar(
       currentIndex: currentIndex,
       onTap: onClick,
-      items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: "Dashboard",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.monitor_heart),
-          label: "Analysis",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.account_circle_sharp),
-          label: "Profiles",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.settings),
-          label: "Settings",
-        ),
-      ],
+      items: items,
     );
   }
 }
