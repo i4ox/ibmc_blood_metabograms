@@ -7,8 +7,6 @@ class S {
   static const en = Locale('en');
   static const ru = Locale('ru');
 
-  static bool isEn(Locale locale) => locale == en;
-
   static const supportedLocales = [en, ru];
 
   static const localizationDelegates = <LocalizationsDelegate>[

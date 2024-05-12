@@ -11,9 +11,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     context.read<HomeBloc>().add(HomeCheckOnboarding());
     return BlocConsumer<HomeBloc, HomeState>(
-      builder: (context, state) {
-        return Container();
-      },
+      builder: (context, state) => Scaffold(), // placeholder
       listener: (context, state) {
         if (state is HomeOnboarding) {
           context.go('/onboarding');

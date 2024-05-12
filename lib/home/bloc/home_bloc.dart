@@ -24,9 +24,6 @@ void _checkOnboarding(HomeEvent event, Emitter<HomeState> emit) {
   final isOnboardingShown = OnboardingShownStorage();
   final isMobile = Platform.isIOS || Platform.isAndroid;
 
-  isOnboardingShown.setIsOnboardingShown(
-    value: false,
-  );
   if (isOnboardingShown.getIsOnboardingShown() == false && isMobile) {
     isOnboardingShown.setIsOnboardingShown(
       value: true,

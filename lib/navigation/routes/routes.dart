@@ -4,6 +4,7 @@ import 'package:ibmc_blood_metabograms/features/analysis/analysis.dart';
 import 'package:ibmc_blood_metabograms/features/dashboard/dashboard.dart';
 import 'package:ibmc_blood_metabograms/features/profiles/profiles.dart';
 import 'package:ibmc_blood_metabograms/features/settings/settings.dart';
+import 'package:ibmc_blood_metabograms/features/settings/view/l10n_screen.dart';
 import 'package:ibmc_blood_metabograms/home/home.dart';
 import 'package:ibmc_blood_metabograms/navigation/navigation.dart';
 import 'package:ibmc_blood_metabograms/onboarding/onboarding.dart';
@@ -40,7 +41,7 @@ GoRouter createRouter() => GoRouter(
         StatefulShellBranch(
           navigatorKey: _dashboardNavigatorKey,
           routes: <GoRoute>[
-              GoRoute(
+            GoRoute(
               path: '/dashboard',
               builder: (context, state) => DashboardScreen(),
             ),
@@ -49,7 +50,7 @@ GoRouter createRouter() => GoRouter(
         StatefulShellBranch(
           navigatorKey: _analysisNavigatorKey,
           routes: <GoRoute>[
-              GoRoute(
+            GoRoute(
               path: '/analysis',
               builder: (context, state) => AnalysisScreen(),
             ),
@@ -58,7 +59,7 @@ GoRouter createRouter() => GoRouter(
         StatefulShellBranch(
           navigatorKey: _profilesNavigatorKey,
           routes: <GoRoute>[
-              GoRoute(
+            GoRoute(
               path: '/profiles',
               builder: (context, state) => ProfilesScreen(),
             ),
@@ -67,9 +68,15 @@ GoRouter createRouter() => GoRouter(
         StatefulShellBranch(
           navigatorKey: _settingsNavigatorKey,
           routes: <GoRoute>[
-              GoRoute(
+            GoRoute(
               path: '/settings',
               builder: (context, state) => SettingsScreen(),
+              routes: <GoRoute>[
+                GoRoute(
+                  path: 'l10n',
+                  builder: (context, state) => L10nScreen(),
+                ),
+              ],
             ),
           ],
         ),
