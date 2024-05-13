@@ -6,18 +6,21 @@ import 'package:ibmc_blood_metabograms/features/settings/bloc/l10n/l10n_bloc.dar
 import 'package:ibmc_blood_metabograms/home/home.dart';
 import 'package:ibmc_blood_metabograms/service_locator.dart';
 
+/// Main app widget
 class App extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _AppState();
 }
 
-/// Main app widget
+/// State for [App]
 class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [
-        BlocProvider<AppBloc>(create: (context) => AppBloc()),
+      providers: <BlocProvider>[
+        BlocProvider<AppBloc>(
+          create: (context) => AppBloc(),
+        ),
         BlocProvider<HomeBloc>(
           create: (context) => getIt<HomeBloc>(),
         ),

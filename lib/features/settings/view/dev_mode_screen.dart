@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Screen with developers functions
 class DevModeScreen extends StatelessWidget {
   const DevModeScreen({
     super.key,

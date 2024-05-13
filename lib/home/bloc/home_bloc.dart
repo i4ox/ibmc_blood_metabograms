@@ -16,10 +16,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 }
 
+/// Helper function which close the [OnboardingScreen]
 void _closeOnboarding(HomeEvent event, Emitter<HomeState> emit) {
   emit(HomeClean());
 }
 
+/// Helper function which check should or not show the [OnboardingScreen]
 void _checkOnboarding(HomeEvent event, Emitter<HomeState> emit) {
   final isOnboardingShown = OnboardingShownStorage();
   final isMobile = Platform.isIOS || Platform.isAndroid;

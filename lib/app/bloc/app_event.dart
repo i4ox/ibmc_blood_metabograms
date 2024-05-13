@@ -7,14 +7,3 @@ abstract class AppEvent extends Equatable {
   @override
   List<Object?> get props => [];
 }
-
-class AppChangeLocale extends AppEvent {
-  const AppChangeLocale({
-    required this.locale,
-  });
-
-  final Locale locale;
-
-  @override
-  List<Object?> get props => [locale];
-}

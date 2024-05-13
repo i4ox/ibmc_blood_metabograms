@@ -6,12 +6,13 @@ import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_palette.dart';
 import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_scheme.dart';
 import 'package:ibmc_blood_metabograms/uikit/text/ibmc_text_scheme.dart';
 
-class OnboardingPageIndicators extends StatefulWidget {
+/// Widget which build the indicators and buttons for [OnboardingScreen]
+class OnboardingIndicators extends StatefulWidget {
   final VoidCallback onClick;
   final int countOfDots;
   final int currentPage;
 
-  const OnboardingPageIndicators({
+  const OnboardingIndicators({
     super.key,
     required this.currentPage,
     required this.onClick,
@@ -19,10 +20,11 @@ class OnboardingPageIndicators extends StatefulWidget {
   });
 
   @override
-  State<OnboardingPageIndicators> createState() => _OnboardingPageIndicatorsState();
+  State<OnboardingIndicators> createState() => _OnboardingPageIndicatorsState();
 }
 
-class _OnboardingPageIndicatorsState extends State<OnboardingPageIndicators> {
+/// State for [OnboardingIndicators]
+class _OnboardingPageIndicatorsState extends State<OnboardingIndicators> {
   @override
   Widget build(BuildContext context) {
     return Container(

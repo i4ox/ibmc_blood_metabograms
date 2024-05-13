@@ -19,6 +19,7 @@ class ScaffoldNavigationShell extends StatefulWidget {
   State<StatefulWidget> createState() => _ScaffoldNavigationShellState();
 }
 
+/// State for [ScaffoldNavigationShell]
 class _ScaffoldNavigationShellState extends State<ScaffoldNavigationShell> {
   @override
   Widget build(BuildContext context) {
@@ -36,10 +37,12 @@ class _ScaffoldNavigationShellState extends State<ScaffoldNavigationShell> {
     );
   }
 
+  /// Helper method which go to the selected item of [AppBottomNavigationBar]
   void _setActiveIndex(int index) {
     widget.navigationShell.goBranch(index, initialLocation: index == widget.navigationShell.currentIndex);
   }
 
+  /// Helper method which return all items for [AppBottomNavigationBar] inside [HomeScreen]
   List<SalomonBottomBarItem> _items(BuildContext context, int currentIndex) {
     return <SalomonBottomBarItem>[
       SalomonBottomBarItem(

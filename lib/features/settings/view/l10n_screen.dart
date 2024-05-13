@@ -7,6 +7,7 @@ import 'package:ibmc_blood_metabograms/features/settings/bloc/l10n/l10n_bloc.dar
 import 'package:ibmc_blood_metabograms/l10n/s.dart';
 import 'package:ibmc_blood_metabograms/service_locator.dart';
 
+/// Screen which help to change the locale
 class L10nScreen extends StatelessWidget {
   const L10nScreen({super.key});
 

@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ibmc_blood_metabograms/assets/resources.dart';
@@ -8,6 +6,7 @@ import 'package:ibmc_blood_metabograms/features/settings/widgets/settings_tile.d
 import 'package:ibmc_blood_metabograms/l10n/s.dart';
 import 'package:ibmc_blood_metabograms/service_locator.dart';
 
+/// List which print all settings inside [SettingsScreen]
 class SettingsList extends StatelessWidget {
   Widget _createSettingsItem(BuildContext context, int index) {
     final settings = _getSettings(context);
@@ -19,6 +18,7 @@ class SettingsList extends StatelessWidget {
     return settings[index];
   }
 
+  /// Helper method which create list of all settings
   List<SettingsTile> _getSettings(BuildContext context) {
     return [
       SettingsTile(

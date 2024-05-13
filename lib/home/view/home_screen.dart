@@ -11,6 +11,7 @@ class HomeScreen extends StatefulWidget {
   State<StatefulWidget> createState() => _HomeScreenState();
 }
 
+/// State for [HomeScreen]
 class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {

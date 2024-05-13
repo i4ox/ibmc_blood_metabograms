@@ -3,7 +3,8 @@ import 'package:ibmc_blood_metabograms/l10n/s.dart';
 import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_palette.dart';
 import 'package:ibmc_blood_metabograms/uikit/text/ibmc_text_scheme.dart';
 
-class OnboardingPage {
+/// Widget which build the content for [OnboardingScreen]
+class OnboardingContent {
   static const List<Image> _containersImages = [
     Image(
       image: AssetImage('assets/images/onboarding_1.png'),
@@ -22,6 +23,7 @@ class OnboardingPage {
     ),
   ];
 
+  /// Custom build method for [OnboardingContent] widget
   static List<Widget> build(BuildContext context, int numPages) {
     return List.generate(numPages, (index) {
       return Container(
@@ -102,6 +104,7 @@ class OnboardingPage {
   }
 }
 
+/// Helper function which return the title of active part of [OnboardingScreen]
 String _getOnboardingTitle(BuildContext context, int index) {
   List<String> titles = <String>[
     S.of(context).firstOnboardingTitle,
@@ -111,6 +114,7 @@ String _getOnboardingTitle(BuildContext context, int index) {
   return titles[index];
 }
 
+/// Helper function which return the description of active part of [OnboardingScreen]
 String _getOnboardingDescription(BuildContext context, int index) {
   List<String> descriptions = <String>[
     S.of(context).firstOnboardingDescription,

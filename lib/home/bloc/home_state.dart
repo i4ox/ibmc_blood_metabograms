@@ -1,6 +1,6 @@
 part of 'home_bloc.dart';
 
-/// State for [HomeBloc]
+/// State part of [HomeBloc]
 abstract class HomeState extends Equatable {
   const HomeState();
 

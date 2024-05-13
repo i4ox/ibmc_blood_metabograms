@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/onboarding/widgets/onboarding_page.dart';
-import 'package:ibmc_blood_metabograms/onboarding/widgets/onboarding_page_indicators.dart';
+import 'package:ibmc_blood_metabograms/onboarding/widgets/widgets.dart';
 
 /// Onboarding screen widget
 class OnboardingScreen extends StatefulWidget {
@@ -11,10 +10,6 @@ class OnboardingScreen extends StatefulWidget {
 /// State for [OnboardingScreen]
 class _OnboardingScreenState extends State<OnboardingScreen> {
   final int _numPages = 3;
-
-  double getImageTopPadding(int page) {
-    return 0.0;
-  }
 
   final PageController _pageController = PageController(initialPage: 0);
 
@@ -37,10 +32,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     _currentPage = page;
                   });
                 },
-                children: OnboardingPage.build(context, _numPages),
+                children: OnboardingContent.build(context, _numPages),
               ),
             ),
-            OnboardingPageIndicators(
+            OnboardingIndicators(
               onClick: () {
                 _pageController.nextPage(
                   duration: const Duration(milliseconds: 200),
