@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_palette.dart';
+import 'package:ibmc_blood_metabograms/uikit/colors/app_color_scheme.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
-/// Default BottomNavigationBar widget
+/// Custom [BottomNavigationBar] widget
 class AppBottomNavigationBar extends StatelessWidget {
   const AppBottomNavigationBar({
     super.key,
@@ -19,7 +19,7 @@ class AppBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SalomonBottomBar(
       currentIndex: currentIndex,
-      selectedItemColor: IbmcColorPalette.purple,
+      selectedItemColor: AppColorScheme.light().primary,
       onTap: onClick,
       items: items,
     );

@@ -11,7 +11,7 @@ const _double22 = 22.0;
 const _double11 = 11.0;
 
 /// Text style for IBMC app
-enum IbmcTextStyle {
+enum AppTextStyle {
   displayLarge(TextStyle(fontFamily: 'Inter', fontSize: _double57, height: 57 / 64)),
   displayMedium(TextStyle(fontFamily: 'Inter', fontSize: _double45, height: 45 / 52)),
   displaySmall(TextStyle(fontFamily: 'Inter', fontSize: _double36, height: 36 / 44)),
@@ -65,5 +65,5 @@ enum IbmcTextStyle {
 
   final TextStyle value;
 
-  const IbmcTextStyle(this.value);
+  const AppTextStyle(this.value);
 }

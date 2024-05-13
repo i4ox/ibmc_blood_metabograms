@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /// Application light colors palette
-abstract class IbmcColorPalette {
+abstract class AppColorPalette {
   static Color purple = Color(0xFF9086F9);
 
   static Color darkerPurple = Color(0xFF7A6EFE);

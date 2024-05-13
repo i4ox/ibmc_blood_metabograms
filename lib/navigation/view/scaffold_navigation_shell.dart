@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ibmc_blood_metabograms/assets/resources.dart';
 import 'package:ibmc_blood_metabograms/home/home.dart';
 import 'package:ibmc_blood_metabograms/l10n/s.dart';
 import 'package:ibmc_blood_metabograms/uikit/bottom_navigation_bar/app_bottom_navigation_bar.dart';
-import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_scheme.dart';
-import 'package:ibmc_blood_metabograms/util/extensions/color_filter.dart';
+import 'package:ibmc_blood_metabograms/uikit/bottom_navigation_bar/app_bottom_navigation_bar_item.dart';
+import 'package:ibmc_blood_metabograms/uikit/colors/app_color_scheme.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 /// NavigationShell with [Scaffold] for [HomeScreen]
@@ -42,37 +41,35 @@ class _ScaffoldNavigationShellState extends State<ScaffoldNavigationShell> {
     widget.navigationShell.goBranch(index, initialLocation: index == widget.navigationShell.currentIndex);
   }
 
+
+  /// Helper method which return color for item
+  Color _getColorForItem(int itemIndex, int currentIndex) {
+    return itemIndex == currentIndex ? AppColorScheme.light().primary : Color(0xFF6C7278);
+  }
+
   /// Helper method which return all items for [AppBottomNavigationBar] inside [HomeScreen]
   List<SalomonBottomBarItem> _items(BuildContext context, int currentIndex) {
     return <SalomonBottomBarItem>[
-      SalomonBottomBarItem(
-        title: Text(S.of(context).dashboard),
-        icon: SvgPicture.asset(
-          SvgIcons.dashboard,
-          colorFilter: currentIndex == 0 ? IbmcColorScheme.light().primary.toColorFilter : null,
-        ),
-      ),
-      SalomonBottomBarItem(
-        icon: SvgPicture.asset(
-          SvgIcons.activity,
-          colorFilter: currentIndex == 1 ? IbmcColorScheme.light().primary.toColorFilter : null,
-        ),
-        title: Text(S.of(context).analysis),
-      ),
-      SalomonBottomBarItem(
-        icon: SvgPicture.asset(
-          SvgIcons.profiles,
-          colorFilter: currentIndex == 2 ? IbmcColorScheme.light().primary.toColorFilter : null,
-        ),
-        title: Text(S.of(context).profiles),
-      ),
-      SalomonBottomBarItem(
-        icon: SvgPicture.asset(
-          SvgIcons.settings,
-          colorFilter: currentIndex == 3 ? IbmcColorScheme.light().primary.toColorFilter : null,
-        ),
-        title: Text(S.of(context).settings),
-      ),
+      AppBottomNavigationBarItem(
+        title: S.of(context).dashboard,
+        icon: SvgIcons.dashboard,
+        color: _getColorForItem(0, currentIndex),
+      ).build(),
+      AppBottomNavigationBarItem(
+        title: S.of(context).analysis,
+        icon: SvgIcons.activity,
+        color: _getColorForItem(1, currentIndex),
+      ).build(),
+      AppBottomNavigationBarItem(
+        title: S.of(context).profiles,
+        icon: SvgIcons.profiles,
+        color: _getColorForItem(2, currentIndex),
+      ).build(),
+      AppBottomNavigationBarItem(
+        title: S.of(context).settings,
+        icon: SvgIcons.settings,
+        color: _getColorForItem(3, currentIndex),
+      ).build(),
     ];
   }
 }

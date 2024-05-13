@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ibmc_blood_metabograms/app/app.dart';
-import 'package:ibmc_blood_metabograms/app/widget/material_app_builder.dart.dart';
+import 'package:ibmc_blood_metabograms/app/widget/widget.dart';
 import 'package:ibmc_blood_metabograms/features/settings/bloc/l10n/l10n_bloc.dart';
 import 'package:ibmc_blood_metabograms/home/home.dart';
 import 'package:ibmc_blood_metabograms/service_locator.dart';

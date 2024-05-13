@@ -5,7 +5,7 @@ import 'package:ibmc_blood_metabograms/config/app_config.dart';
 import 'package:ibmc_blood_metabograms/features/settings/bloc/l10n/l10n_bloc.dart';
 import 'package:ibmc_blood_metabograms/l10n/s.dart';
 import 'package:ibmc_blood_metabograms/service_locator.dart';
-import 'package:ibmc_blood_metabograms/uikit/theme/ibmc_theme_data.dart';
+import 'package:ibmc_blood_metabograms/uikit/theme/app_theme_data.dart';
 
 /// Builder which build the MaterialApp with router
 class MaterialAppBuilder extends StatelessWidget {
@@ -22,7 +22,7 @@ class MaterialAppBuilder extends StatelessWidget {
         locale: state.locale,
         localizationsDelegates: S.localizationDelegates,
         routerConfig: getIt<GoRouter>(),
-        theme: IbmcThemeData.lightTheme,
+        theme: AppThemeData.lightTheme,
         // TODO: Add the dark theme
         themeMode: ThemeMode.light,
       ),

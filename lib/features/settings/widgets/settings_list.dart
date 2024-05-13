@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ibmc_blood_metabograms/assets/resources.dart';
 import 'package:ibmc_blood_metabograms/config/app_config.dart';
-import 'package:ibmc_blood_metabograms/features/settings/widgets/settings_tile.dart';
+import 'package:ibmc_blood_metabograms/features/settings/widgets/widgets.dart';
 import 'package:ibmc_blood_metabograms/l10n/s.dart';
 import 'package:ibmc_blood_metabograms/service_locator.dart';
 

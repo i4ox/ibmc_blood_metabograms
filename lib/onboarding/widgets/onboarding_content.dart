@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ibmc_blood_metabograms/l10n/s.dart';
-import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_palette.dart';
-import 'package:ibmc_blood_metabograms/uikit/text/ibmc_text_scheme.dart';
+import 'package:ibmc_blood_metabograms/uikit/colors/app_color_scheme.dart';
+import 'package:ibmc_blood_metabograms/uikit/text/app_text_scheme.dart';
 
 /// Widget which build the content for [OnboardingScreen]
 class OnboardingContent {
@@ -58,7 +58,7 @@ class OnboardingContent {
                       blurRadius: 10,
                     ),
                   ],
-                  color: IbmcColorPalette.white,
+                  color: AppColorScheme.light().surface,
                   borderRadius: BorderRadiusDirectional.only(
                     topStart: Radius.circular(20),
                     topEnd: Radius.circular(20),
@@ -76,7 +76,7 @@ class OnboardingContent {
                       Text(
                         _getOnboardingTitle(context, index),
                         textAlign: TextAlign.center,
-                        style: IbmcTextScheme.onboarding().headline.copyWith(
+                        style: AppTextScheme.onboarding().headline.copyWith(
                               fontFamily: "PlusJakartaSans",
                               fontWeight: FontWeight.w600,
                             ),
@@ -85,11 +85,11 @@ class OnboardingContent {
                       Text(
                         _getOnboardingDescription(context, index),
                         textAlign: TextAlign.center,
-                        style: IbmcTextScheme.onboarding().label.copyWith(
+                        style: AppTextScheme.onboarding().label.copyWith(
                               height: 2,
                               fontSize: 16,
                               fontFamily: "PlusJakartaSans",
-                              color: IbmcColorPalette.lighterBlack,
+                              color: AppColorScheme.light().textFieldLabel,
                             ),
                       ),
                     ],

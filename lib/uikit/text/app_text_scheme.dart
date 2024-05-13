@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/uikit/text/ibmc_text_style.dart';
+import 'package:ibmc_blood_metabograms/uikit/text/app_text_style.dart';
 
 /// Text style scheme for IBMC app
-class IbmcTextScheme extends ThemeExtension<IbmcTextScheme> {
+class AppTextScheme extends ThemeExtension<AppTextScheme> {
   /// Text style with a size of 45/52.
   /// Use for short, important text or numerals.
   final TextStyle display;
@@ -15,30 +15,30 @@ class IbmcTextScheme extends ThemeExtension<IbmcTextScheme> {
   /// Use for things like the text inside components or for very small text in the content body.
   final TextStyle label;
 
-  const IbmcTextScheme._({
+  const AppTextScheme._({
     required this.display,
     required this.headline,
     required this.label,
   });
 
   /// Base app text theme.
-  IbmcTextScheme.base()
-      : display = IbmcTextStyle.displayMedium.value,
-        headline = IbmcTextStyle.headlineMedium.value,
-        label = IbmcTextStyle.labelMedium.value;
+  AppTextScheme.base()
+      : display = AppTextStyle.displayMedium.value,
+        headline = AppTextStyle.headlineMedium.value,
+        label = AppTextStyle.labelMedium.value;
 
-  IbmcTextScheme.onboarding()
-      : display = IbmcTextStyle.displaySmall.value,
-        headline = IbmcTextStyle.headlineSmall.value,
-        label = IbmcTextStyle.labelLarge.value;
+  AppTextScheme.onboarding()
+      : display = AppTextStyle.displaySmall.value,
+        headline = AppTextStyle.headlineSmall.value,
+        label = AppTextStyle.labelLarge.value;
 
   @override
-  ThemeExtension<IbmcTextScheme> copyWith({
+  ThemeExtension<AppTextScheme> copyWith({
     TextStyle? display,
     TextStyle? headline,
     TextStyle? label,
   }) {
-    return IbmcTextScheme._(
+    return AppTextScheme._(
       display: display ?? this.display,
       headline: headline ?? this.headline,
       label: label ?? this.label,
@@ -46,12 +46,12 @@ class IbmcTextScheme extends ThemeExtension<IbmcTextScheme> {
   }
 
   @override
-  ThemeExtension<IbmcTextScheme> lerp(covariant ThemeExtension<IbmcTextScheme>? other, double t) {
-    if (other is! IbmcTextScheme) {
+  ThemeExtension<AppTextScheme> lerp(covariant ThemeExtension<AppTextScheme>? other, double t) {
+    if (other is! AppTextScheme) {
       return this;
     }
 
-    return IbmcTextScheme._(
+    return AppTextScheme._(
       display: TextStyle.lerp(display, other.display, t)!,
       headline: TextStyle.lerp(headline, other.headline, t)!,
       label: TextStyle.lerp(label, other.label, t)!,
@@ -59,9 +59,9 @@ class IbmcTextScheme extends ThemeExtension<IbmcTextScheme> {
   }
 
   /// Return text theme for app from context.
-  static IbmcTextScheme of(BuildContext context) {
-    return Theme.of(context).extension<IbmcTextScheme>() ?? _throwThemeExceptionFromFunc(context);
+  static AppTextScheme of(BuildContext context) {
+    return Theme.of(context).extension<AppTextScheme>() ?? _throwThemeExceptionFromFunc(context);
   }
 }
 
-Never _throwThemeExceptionFromFunc(BuildContext context) => throw Exception('$IbmcTextScheme not found in $context');
+Never _throwThemeExceptionFromFunc(BuildContext context) => throw Exception('$AppTextScheme not found in $context');

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/features/settings/widgets/settings_list.dart';
+import 'package:ibmc_blood_metabograms/features/settings/widgets/widgets.dart';
 import 'package:ibmc_blood_metabograms/l10n/s.dart';
 
 /// Settings screen widget

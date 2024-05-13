@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_scheme.dart';
+import 'package:ibmc_blood_metabograms/uikit/colors/app_color_scheme.dart';
 import 'package:ibmc_blood_metabograms/util/extensions/color_filter.dart';
 
 /// Tile of [ListTile] for [SettingsScreen]
@@ -30,7 +30,7 @@ class SettingsTile extends StatelessWidget {
     return ListTile(
       leading: SvgPicture.asset(
         icon,
-        colorFilter: IbmcColorScheme.light().primary.toColorFilter,
+        colorFilter: AppColorScheme.light().primary.toColorFilter,
       ),
       onTap: () => onClick(),
       title: Text(title),

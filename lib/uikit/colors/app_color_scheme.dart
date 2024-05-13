@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_palette.dart';
+import 'package:ibmc_blood_metabograms/uikit/colors/app_color_palette.dart';
 
-/// Ibmc brand color scheme
-class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
+/// App brand color scheme
+class AppColorScheme extends ThemeExtension<AppColorScheme> {
   /// Can be used as an accent color for buttons, switches, labels, icons, etc.
   final Color primary;
 
@@ -63,30 +63,30 @@ class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
   /// Color of helper text in text field.
   final Color textFieldHelper;
 
-  IbmcColorScheme.light()
-      : primary = IbmcColorPalette.purple,
-        onPrimary = IbmcColorPalette.white,
-        secondary = IbmcColorPalette.green,
-        onSecondary = IbmcColorPalette.white,
-        surface = IbmcColorPalette.white,
-        surfaceSecondary = IbmcColorPalette.darkerWhite,
-        onSurface = IbmcColorPalette.black,
-        background = IbmcColorPalette.white,
-        backgroundSecondary = IbmcColorPalette.darkerWhite,
-        onBackground = IbmcColorPalette.black,
-        danger = IbmcColorPalette.red,
-        dangerSecondary = IbmcColorPalette.darkerRed,
-        onDanger = IbmcColorPalette.white,
-        inactive = IbmcColorPalette.grey,
-        positive = IbmcColorPalette.green,
-        onPositive = IbmcColorPalette.white,
-        shimmer = IbmcColorPalette.grey,
-        textField = IbmcColorPalette.black,
-        textFieldLabel = IbmcColorPalette.black,
-        textFieldHelper = IbmcColorPalette.black.withOpacity(0.5);
+  AppColorScheme.light()
+      : primary = AppColorPalette.purple,
+        onPrimary = AppColorPalette.white,
+        secondary = AppColorPalette.green,
+        onSecondary = AppColorPalette.white,
+        surface = AppColorPalette.white,
+        surfaceSecondary = AppColorPalette.darkerWhite,
+        onSurface = AppColorPalette.black,
+        background = AppColorPalette.white,
+        backgroundSecondary = AppColorPalette.darkerWhite,
+        onBackground = AppColorPalette.black,
+        danger = AppColorPalette.red,
+        dangerSecondary = AppColorPalette.darkerRed,
+        onDanger = AppColorPalette.white,
+        inactive = AppColorPalette.grey,
+        positive = AppColorPalette.green,
+        onPositive = AppColorPalette.white,
+        shimmer = AppColorPalette.grey,
+        textField = AppColorPalette.black,
+        textFieldLabel = AppColorPalette.black,
+        textFieldHelper = AppColorPalette.black.withOpacity(0.5);
 
   // ignore: unused_element
-  const IbmcColorScheme._({
+  const AppColorScheme._({
     required this.primary,
     required this.onPrimary,
     required this.secondary,
@@ -110,7 +110,7 @@ class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
   });
 
   @override
-  ThemeExtension<IbmcColorScheme> copyWith({
+  ThemeExtension<AppColorScheme> copyWith({
     Color? primary,
     Color? onPrimary,
     Color? secondary,
@@ -132,7 +132,7 @@ class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
     Color? textFieldLabel,
     Color? textFieldHelper,
   }) {
-    return IbmcColorScheme._(
+    return AppColorScheme._(
       primary: primary ?? this.primary,
       onPrimary: onPrimary ?? this.onPrimary,
       secondary: secondary ?? this.secondary,
@@ -157,10 +157,10 @@ class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
   }
 
   @override
-  ThemeExtension<IbmcColorScheme> lerp(covariant ThemeExtension<IbmcColorScheme>? other, double t) {
-    if (other is! IbmcColorScheme) return this;
+  ThemeExtension<AppColorScheme> lerp(covariant ThemeExtension<AppColorScheme>? other, double t) {
+    if (other is! AppColorScheme) return this;
 
-    return IbmcColorScheme._(
+    return AppColorScheme._(
       primary: Color.lerp(primary, other.primary, t)!,
       onPrimary: Color.lerp(onPrimary, other.onPrimary, t)!,
       secondary: Color.lerp(secondary, other.secondary, t)!,
@@ -184,6 +184,6 @@ class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
     );
   }
 
-  /// Returns [IbmcColorScheme] from [context]
-  static IbmcColorScheme of(BuildContext context) => Theme.of(context).extension<IbmcColorScheme>()!;
+  /// Returns [AppColorScheme] from [context]
+  static AppColorScheme of(BuildContext context) => Theme.of(context).extension<AppColorScheme>()!;
 }

@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ibmc_blood_metabograms/home/home.dart';
 import 'package:ibmc_blood_metabograms/service_locator.dart';
-import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_palette.dart';
-import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_scheme.dart';
-import 'package:ibmc_blood_metabograms/uikit/text/ibmc_text_scheme.dart';
+import 'package:ibmc_blood_metabograms/uikit/colors/app_color_scheme.dart';
+import 'package:ibmc_blood_metabograms/uikit/text/app_text_scheme.dart';
 
 /// Widget which build the indicators and buttons for [OnboardingScreen]
 class OnboardingIndicators extends StatefulWidget {
@@ -29,7 +28,7 @@ class _OnboardingPageIndicatorsState extends State<OnboardingIndicators> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: IbmcColorPalette.white,
+        color: AppColorScheme.light().surface,
       ),
       child: Padding(
         padding: const EdgeInsets.only(bottom: 35.0, left: 20.0, right: 20.0),
@@ -46,8 +45,8 @@ class _OnboardingPageIndicatorsState extends State<OnboardingIndicators> {
                     },
                     child: Text(
                       "Пропустить",
-                      style: IbmcTextScheme.onboarding().label.copyWith(
-                            color: IbmcColorScheme.light().danger,
+                      style: AppTextScheme.onboarding().label.copyWith(
+                            color: AppColorScheme.light().danger,
                           ),
                     ),
                   ),
@@ -56,8 +55,8 @@ class _OnboardingPageIndicatorsState extends State<OnboardingIndicators> {
                     onPressed: widget.onClick,
                     child: Text(
                       "Далее",
-                      style: IbmcTextScheme.onboarding().label.copyWith(
-                            color: IbmcColorScheme.light().secondary,
+                      style: AppTextScheme.onboarding().label.copyWith(
+                            color: AppColorScheme.light().secondary,
                           ),
                     ),
                   )
@@ -68,8 +67,8 @@ class _OnboardingPageIndicatorsState extends State<OnboardingIndicators> {
                     },
                     child: Text(
                       "Начать",
-                      style: IbmcTextScheme.onboarding().label.copyWith(
-                            color: IbmcColorScheme.light().secondary,
+                      style: AppTextScheme.onboarding().label.copyWith(
+                            color: AppColorScheme.light().secondary,
                           ),
                     ),
                   ),
