@@ -33,8 +33,7 @@ Future<void> run() async {
 
   // Create app config
   final appConfig = AppConfig(
-    sentryDsn:
-        "https://a9166578dccc224f1cf81a1f8eb12244@o4507192576311296.ingest.de.sentry.io/4507192577228880",
+    sentryDsn: "https://a9166578dccc224f1cf81a1f8eb12244@o4507192576311296.ingest.de.sentry.io/4507192577228880",
     environmentType: "debug",
   );
 
@@ -46,7 +45,6 @@ Future<void> run() async {
 
 /// Initial services needed for correct work of application
 Future<void> _runApp() async {
-
   // Setup the observer for bloc
   Bloc.observer = AppBlocObserver();
 

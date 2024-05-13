@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/config/s.dart';
+import 'package:ibmc_blood_metabograms/l10n/s.dart';
 import 'package:ibmc_blood_metabograms/uikit/colors/ibmc_color_palette.dart';
 import 'package:ibmc_blood_metabograms/uikit/text/ibmc_text_scheme.dart';
 
 class OnboardingPage {
-
   static const List<Image> _containersImages = [
     Image(
       image: AssetImage('assets/images/onboarding_1.png'),
@@ -26,7 +25,7 @@ class OnboardingPage {
   static List<Widget> build(BuildContext context, int numPages) {
     return List.generate(numPages, (index) {
       return Container(
-          child: Stack(
+        child: Stack(
           alignment: AlignmentDirectional.center,
           children: <Widget>[
             Positioned(
@@ -76,20 +75,20 @@ class OnboardingPage {
                         _getOnboardingTitle(context, index),
                         textAlign: TextAlign.center,
                         style: IbmcTextScheme.onboarding().headline.copyWith(
-                          fontFamily: "PlusJakartaSans",
-                          fontWeight: FontWeight.w600,
-                        ),
+                              fontFamily: "PlusJakartaSans",
+                              fontWeight: FontWeight.w600,
+                            ),
                       ),
                       const SizedBox(height: 30.0),
                       Text(
                         _getOnboardingDescription(context, index),
                         textAlign: TextAlign.center,
                         style: IbmcTextScheme.onboarding().label.copyWith(
-                          height: 2,
-                          fontSize: 16,
-                          fontFamily: "PlusJakartaSans",
-                          color: IbmcColorPalette.lighterBlack,
-                        ),
+                              height: 2,
+                              fontSize: 16,
+                              fontFamily: "PlusJakartaSans",
+                              color: IbmcColorPalette.lighterBlack,
+                            ),
                       ),
                     ],
                   ),

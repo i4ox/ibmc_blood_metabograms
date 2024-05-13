@@ -14,16 +14,19 @@ class AppLocalizationsRu extends AppLocalizations {
   String get thirdOnboardingTitle => 'Огромный спектр услуг';
 
   @override
-  String get firstOnboardingDescription => 'Приложение позволяет просматривать как краткую сводку о состоянии пациента, так и крайне развернутую и детальную статистику на основе таблиц и графов';
+  String get firstOnboardingDescription =>
+      'Приложение позволяет просматривать как краткую сводку о состоянии пациента, так и крайне развернутую и детальную статистику на основе таблиц и графов';
 
   @override
-  String get secondOnboardingDescription => 'В приложении поддерживается функционал с использованием искусственного интеллекта. В роли которого выступает специально обученный BioChatGpt с точностью около 87%';
+  String get secondOnboardingDescription =>
+      'В приложении поддерживается функционал с использованием искусственного интеллекта. В роли которого выступает специально обученный BioChatGpt с точностью около 87%';
 
   @override
-  String get thirdOnboardingDescription => 'В приложении имеется множество различных функций, от просмотра анализов до генерации научных публикаций при помощи искусственного интелекта на основе собранных анализов';
+  String get thirdOnboardingDescription =>
+      'В приложении имеется множество различных функций, от просмотра анализов до генерации научных публикаций при помощи искусственного интелекта на основе собранных анализов';
 
   @override
-  String get dashboard => 'Дешбоард';
+  String get dashboard => 'Главная';
 
   @override
   String get analysis => 'Анализы';
@@ -33,4 +36,22 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get settings => 'Настройки';
+
+  @override
+  String get changeLanguage => 'Сменить язык';
+
+  @override
+  String get switchLightTheme => 'Изменить тему на темную';
+
+  @override
+  String get switchDarkTheme => 'Изменить тему на светлую';
+
+  @override
+  String get devMode => 'Режим разработчика';
+
+  @override
+  String get uikit => 'UiKit';
+
+  @override
+  String get inDevelopment => 'В разработке';
 }

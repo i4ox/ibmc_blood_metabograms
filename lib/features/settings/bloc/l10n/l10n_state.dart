@@ -1,12 +1,9 @@
 part of 'l10n_bloc.dart';
 
 class L10nState extends Equatable {
-  
   final Locale locale;
 
-  const L10nState({
-    required this.locale
-  });
+  const L10nState({required this.locale});
 
   factory L10nState.initial() {
     return const L10nState(locale: S.en);

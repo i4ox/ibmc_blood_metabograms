@@ -1,6 +1,5 @@
 /// App configuration
 class AppConfig {
-
   final String sentryDsn;
 
   final String environmentType;
@@ -9,5 +8,4 @@ class AppConfig {
     required this.sentryDsn,
     required this.environmentType,
   });
-
 }

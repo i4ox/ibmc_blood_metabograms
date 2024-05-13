@@ -12,7 +12,6 @@ final getIt = GetIt.I;
 
 /// Register the services
 Future<void> registerServices(AppConfig appConfig, AppLoggerConfig loggerConfig) async {
-
   // BLoC
   getIt.registerFactory(() => HomeBloc());
   getIt.registerFactory(() => L10nBloc());

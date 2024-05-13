@@ -6,13 +6,11 @@ class IbmcBloodMetabogramsApplication extends StatefulWidget {
   const IbmcBloodMetabogramsApplication({super.key});
 
   @override
-  State<IbmcBloodMetabogramsApplication> createState() =>
-      _IbmcBloodMetabogramsApplicationState();
+  State<IbmcBloodMetabogramsApplication> createState() => _IbmcBloodMetabogramsApplicationState();
 }
 
 /// State for [IbmcBloodMetabogramsApplication] widget
-class _IbmcBloodMetabogramsApplicationState
-    extends State<IbmcBloodMetabogramsApplication> {
+class _IbmcBloodMetabogramsApplicationState extends State<IbmcBloodMetabogramsApplication> {
   @override
   Widget build(BuildContext context) {
     return App();

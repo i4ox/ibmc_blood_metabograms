@@ -10,7 +10,7 @@ part 'home_state.dart';
 
 /// Bloc class for [HomeScreen]
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
-  HomeBloc(): super(HomeInitial()) {
+  HomeBloc() : super(HomeInitial()) {
     on<HomeCheckOnboarding>(_checkOnboarding);
     on<HomeCloseOnboarding>(_closeOnboarding);
   }

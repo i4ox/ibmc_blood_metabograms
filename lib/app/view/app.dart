@@ -17,9 +17,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<AppBloc>(
-          create: (context) => AppBloc()
-        ),
+        BlocProvider<AppBloc>(create: (context) => AppBloc()),
         BlocProvider<HomeBloc>(
           create: (context) => getIt<HomeBloc>(),
         ),

@@ -157,8 +157,7 @@ class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
   }
 
   @override
-  ThemeExtension<IbmcColorScheme> lerp(
-      covariant ThemeExtension<IbmcColorScheme>? other, double t) {
+  ThemeExtension<IbmcColorScheme> lerp(covariant ThemeExtension<IbmcColorScheme>? other, double t) {
     if (other is! IbmcColorScheme) return this;
 
     return IbmcColorScheme._(
@@ -167,12 +166,10 @@ class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
       secondary: Color.lerp(secondary, other.secondary, t)!,
       onSecondary: Color.lerp(onSecondary, other.onSecondary, t)!,
       surface: Color.lerp(surface, other.surface, t)!,
-      surfaceSecondary:
-          Color.lerp(surfaceSecondary, other.surfaceSecondary, t)!,
+      surfaceSecondary: Color.lerp(surfaceSecondary, other.surfaceSecondary, t)!,
       onSurface: Color.lerp(onSurface, other.onSurface, t)!,
       background: Color.lerp(background, other.background, t)!,
-      backgroundSecondary:
-          Color.lerp(backgroundSecondary, other.backgroundSecondary, t)!,
+      backgroundSecondary: Color.lerp(backgroundSecondary, other.backgroundSecondary, t)!,
       onBackground: Color.lerp(onBackground, other.onBackground, t)!,
       danger: Color.lerp(danger, other.danger, t)!,
       dangerSecondary: Color.lerp(dangerSecondary, other.dangerSecondary, t)!,
@@ -188,6 +185,5 @@ class IbmcColorScheme extends ThemeExtension<IbmcColorScheme> {
   }
 
   /// Returns [IbmcColorScheme] from [context]
-  static IbmcColorScheme of(BuildContext context) =>
-      Theme.of(context).extension<IbmcColorScheme>()!;
+  static IbmcColorScheme of(BuildContext context) => Theme.of(context).extension<IbmcColorScheme>()!;
 }

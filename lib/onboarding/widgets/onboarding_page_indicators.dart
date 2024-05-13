@@ -45,18 +45,18 @@ class _OnboardingPageIndicatorsState extends State<OnboardingPageIndicators> {
                     child: Text(
                       "Пропустить",
                       style: IbmcTextScheme.onboarding().label.copyWith(
-                        color: IbmcColorScheme.light().danger,    
-                      ),
+                            color: IbmcColorScheme.light().danger,
+                          ),
                     ),
-                ),
+                  ),
             widget.countOfDots - 1 != widget.currentPage
                 ? TextButton(
                     onPressed: widget.onClick,
                     child: Text(
                       "Далее",
                       style: IbmcTextScheme.onboarding().label.copyWith(
-                        color: IbmcColorScheme.light().secondary,
-                      ),
+                            color: IbmcColorScheme.light().secondary,
+                          ),
                     ),
                   )
                 : TextButton(
@@ -67,8 +67,8 @@ class _OnboardingPageIndicatorsState extends State<OnboardingPageIndicators> {
                     child: Text(
                       "Начать",
                       style: IbmcTextScheme.onboarding().label.copyWith(
-                        color: IbmcColorScheme.light().secondary,
-                      ),  
+                            color: IbmcColorScheme.light().secondary,
+                          ),
                     ),
                   ),
           ],

@@ -20,35 +20,40 @@ enum IbmcTextStyle {
   headlineSmall(TextStyle(fontFamily: 'Inter', fontSize: _double24, height: 24 / 32)),
   titleLarge(TextStyle(fontFamily: 'Inter', fontSize: _double22, height: 22 / 28)),
   titleMedium(
-    TextStyle(fontFamily: 'Inter', 
+    TextStyle(
+      fontFamily: 'Inter',
       fontSize: AppSizes.double16,
       fontWeight: FontWeight.w500,
       height: 16 / 24,
     ),
   ),
   titleSmall(
-    TextStyle(fontFamily: 'Inter', 
+    TextStyle(
+      fontFamily: 'Inter',
       fontSize: AppSizes.double14,
       fontWeight: FontWeight.w500,
       height: 14 / 20,
     ),
   ),
   labelLarge(
-    TextStyle(fontFamily: 'Inter', 
+    TextStyle(
+      fontFamily: 'Inter',
       fontSize: AppSizes.double14,
       fontWeight: FontWeight.w500,
       height: 14 / 20,
     ),
   ),
   labelMedium(
-    TextStyle(fontFamily: 'Inter', 
+    TextStyle(
+      fontFamily: 'Inter',
       fontSize: AppSizes.double12,
       fontWeight: FontWeight.w500,
       height: 12 / 16,
     ),
   ),
   labelSmall(
-    TextStyle(fontFamily: 'Inter', 
+    TextStyle(
+      fontFamily: 'Inter',
       fontSize: _double11,
       fontWeight: FontWeight.w500,
       height: 11 / 16,

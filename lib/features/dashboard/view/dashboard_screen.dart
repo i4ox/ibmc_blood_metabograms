@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ibmc_blood_metabograms/l10n/s.dart';
 
 /// Dashboard screen widget
 class DashboardScreen extends StatefulWidget {
@@ -13,7 +14,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Dashboard")),
+      appBar: AppBar(
+        title: Text(S.of(context).dashboard),
+      ),
+      body: Container(),
     );
   }
 }

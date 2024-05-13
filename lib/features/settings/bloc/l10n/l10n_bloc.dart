@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibmc_blood_metabograms/config/s.dart';
+import 'package:ibmc_blood_metabograms/l10n/s.dart';
 import 'package:ibmc_blood_metabograms/persistence/storage/l10n/l10n_storage.dart';
 
 part 'l10n_event.dart';

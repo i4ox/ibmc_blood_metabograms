@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:ibmc_blood_metabograms/home/home.dart';
-import 'package:ibmc_blood_metabograms/service_locator.dart';
+import 'package:ibmc_blood_metabograms/features/settings/widgets/settings_list.dart';
+import 'package:ibmc_blood_metabograms/l10n/s.dart';
 
 /// Settings screen widget
 class SettingsScreen extends StatefulWidget {
@@ -16,33 +15,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            TextButton(
-              child: Text("ru"),
-              onPressed: () {}
-            ),
-            TextButton(
-              child: Text("en"),
-              onPressed: () {}
-            ),
-            TextButton(
-              child: Text("onboarding"),
-              onPressed: () {
-                getIt<HomeBloc>().add(HomeCheckOnboarding());
-                context.go('/onboarding');
-              },
-            ),
-            TextButton(
-              child: Text("localization"),
-              onPressed: () {
-                context.go('/settings/l10n');
-              },
-            ),
-          ],
-        ),
+      appBar: AppBar(
+        title: Text(S.of(context).settings),
       ),
+      body: SettingsList(),
     );
   }
 }

@@ -13,5 +13,4 @@ class AppBloc extends Bloc<AppEvent, AppState> {
   }
 }
 
-void _changeLocale(AppChangeLocale event, Emitter<AppState> emit) {
-}
+void _changeLocale(AppChangeLocale event, Emitter<AppState> emit) {}

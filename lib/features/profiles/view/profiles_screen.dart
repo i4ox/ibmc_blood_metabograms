@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ibmc_blood_metabograms/l10n/s.dart';
 
 /// Profiles screen widget
 class ProfilesScreen extends StatefulWidget {
@@ -13,7 +14,10 @@ class _ProfilesScreenState extends State<ProfilesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Profile")),
+      appBar: AppBar(
+        title: Text(S.of(context).profiles),
+      ),
+      body: Center(child: Text(S.of(context).inDevelopment)),
     );
   }
 }

@@ -3,7 +3,6 @@ import 'package:logger/logger.dart';
 
 /// Logger for application
 class AppLogger {
-
   /// Initialize logger without specified settings
   static Logger initDefaultLogger() {
     return Logger();

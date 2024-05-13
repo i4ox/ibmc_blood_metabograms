@@ -2,7 +2,6 @@ import 'package:logger/logger.dart';
 
 /// Logger configuration
 class AppLoggerConfig {
-
   final bool colors;
 
   final bool printEmojis;

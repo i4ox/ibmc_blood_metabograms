@@ -5,7 +5,7 @@ import 'package:ibmc_blood_metabograms/onboarding/widgets/onboarding_page_indica
 /// Onboarding screen widget
 class OnboardingScreen extends StatefulWidget {
   @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState(); 
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
 
 /// State for [OnboardingScreen]

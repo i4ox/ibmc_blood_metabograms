@@ -8,5 +8,11 @@
   "dashboard": "Dashboard",
   "analysis": "Analysis",
   "profiles": "Profiles",
-  "settings": "Settings"
+  "settings": "Settings",
+  "changeLanguage": "Change the language",
+  "switchLightTheme": "Switch theme to dark",
+  "switchDarkTheme": "Switch theme to light",
+  "devMode": "Developer mode",
+  "uikit": "UiKit",
+  "inDevelopment": "In development"
 }

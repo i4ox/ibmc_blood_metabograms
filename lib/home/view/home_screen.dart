@@ -4,12 +4,22 @@ import 'package:go_router/go_router.dart';
 import 'package:ibmc_blood_metabograms/home/bloc/home_bloc.dart';
 
 /// Home screen widget
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  State<StatefulWidget> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
     context.read<HomeBloc>().add(HomeCheckOnboarding());
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return BlocConsumer<HomeBloc, HomeState>(
       builder: (context, state) => Scaffold(), // placeholder
       listener: (context, state) {
