@@ -1,10 +1,7 @@
-import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
 const _double57 = 57.0;
@@ -15,6 +12,7 @@ const _double28 = 28.0;
 const _double24 = 24.0;
 const _double22 = 22.0;
 const _double16 = 16.0;
+const _double14 = 14.0;
 const _double11 = 11.0;
 
 /// Text style for IBMC app
@@ -86,7 +84,7 @@ enum AppTextStyle {
   baseLabel(
     TextStyle(
       fontFamily: 'PlusJakartaSans',
-      fontSize: _double11,
+      fontSize: _double14,
       fontWeight: FontWeight.w600,
       height: 1.4,
     ),

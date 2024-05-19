@@ -51,6 +51,10 @@ class HomeNavigationShell extends StatelessWidget {
         icon: SvgVectors.profilesSvg,
       ),
       AppBottomBarItem(
+        title: S.of(context).integrations,
+        icon: SvgVectors.chatgptSvg,
+      ),
+      AppBottomBarItem(
         title: S.of(context).settings,
         icon: SvgVectors.settingsSvg,
       ),

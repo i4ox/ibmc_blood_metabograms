@@ -23,9 +23,6 @@ class AppLocalizationsRu extends AppLocalizations {
   String get thirdOnboardingDescription => 'В приложении имеется множество различных функций, от просмотра анализов до генерации научных публикаций при помощи искусственного интелекта на основе собранных анализов';
 
   @override
-  String get next => 'Далее';
-
-  @override
   String get skip => 'Пропустить';
 
   @override
@@ -39,6 +36,9 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get profiles => 'Профили';
+
+  @override
+  String get integrations => 'Интеграция данных';
 
   @override
   String get settings => 'Настройки';
@@ -78,4 +78,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get inDevelopment => 'В разработке';
+
+  @override
+  String get paidFeature => 'Платный функционал';
 }

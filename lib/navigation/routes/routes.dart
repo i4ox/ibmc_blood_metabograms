@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ibmc_blood_metabograms/features/analysis/analysis.dart';
 import 'package:ibmc_blood_metabograms/features/dashboard/dashboard.dart';
+import 'package:ibmc_blood_metabograms/features/integrations/integrations.dart';
 import 'package:ibmc_blood_metabograms/features/profiles/profiles.dart';
 import 'package:ibmc_blood_metabograms/features/settings/settings.dart';
 import 'package:ibmc_blood_metabograms/features/settings/view/dev_mode_screen.dart';
@@ -15,6 +16,7 @@ final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
 final GlobalKey<NavigatorState> _dashboardNavigatorKey = GlobalKey<NavigatorState>(debugLabel: "dashboard");
 final GlobalKey<NavigatorState> _analysisNavigatorKey = GlobalKey<NavigatorState>(debugLabel: "analysis");
 final GlobalKey<NavigatorState> _profilesNavigatorKey = GlobalKey<NavigatorState>(debugLabel: "profiles");
+final GlobalKey<NavigatorState> _integrationsNavigatorKey = GlobalKey<NavigatorState>(debugLabel: "integrations");
 final GlobalKey<NavigatorState> _settingsNavigatorKey = GlobalKey<NavigatorState>(debugLabel: "settings");
 final GlobalKey<NavigatorState> _uikitWidgetsNavigatorKey = GlobalKey<NavigatorState>(debugLabel: "uikit_widgets");
 final GlobalKey<NavigatorState> _uikitColorsNavigatorKey = GlobalKey<NavigatorState>(debugLabel: "uikit_colors");
@@ -58,6 +60,15 @@ GoRouter createRouter() => GoRouter(
                 GoRoute(
                   path: '/profiles',
                   builder: (context, state) => const ProfilesScreen(),
+                ),
+              ],
+            ),
+            StatefulShellBranch(
+              navigatorKey: _integrationsNavigatorKey,
+              routes: <GoRoute>[
+                GoRoute(
+                  path: '/integrations',
+                  builder: (context, state) => const IntegrationsScreen(),
                 ),
               ],
             ),

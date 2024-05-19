@@ -129,12 +129,6 @@ abstract class AppLocalizations {
   /// **'The app has many different features, from viewing analyzes to generating scientific publications using artificial intelligence based on collected analyses'**
   String get thirdOnboardingDescription;
 
-  /// No description provided for @next.
-  ///
-  /// In en, this message translates to:
-  /// **'Next'**
-  String get next;
-
   /// No description provided for @skip.
   ///
   /// In en, this message translates to:
@@ -164,6 +158,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Profiles'**
   String get profiles;
+
+  /// No description provided for @integrations.
+  ///
+  /// In en, this message translates to:
+  /// **'Data integration'**
+  String get integrations;
 
   /// No description provided for @settings.
   ///
@@ -242,6 +242,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'In development'**
   String get inDevelopment;
+
+  /// No description provided for @paidFeature.
+  ///
+  /// In en, this message translates to:
+  /// **'Paid feature'**
+  String get paidFeature;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

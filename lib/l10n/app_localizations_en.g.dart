@@ -23,9 +23,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get thirdOnboardingDescription => 'The app has many different features, from viewing analyzes to generating scientific publications using artificial intelligence based on collected analyses';
 
   @override
-  String get next => 'Next';
-
-  @override
   String get skip => 'Skip';
 
   @override
@@ -39,6 +36,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get profiles => 'Profiles';
+
+  @override
+  String get integrations => 'Data integration';
 
   @override
   String get settings => 'Settings';
@@ -78,4 +78,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get inDevelopment => 'In development';
+
+  @override
+  String get paidFeature => 'Paid feature';
 }
