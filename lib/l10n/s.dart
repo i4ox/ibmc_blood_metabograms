@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:ibmc_blood_metabograms/l10n/app_localizations.g.dart';
+import 'package:kmk_viewer/l10n/app_localizations.g.dart';
 
 /// Strings
 class S {

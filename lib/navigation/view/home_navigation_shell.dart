@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ibmc_blood_metabograms/assets/resources.dart';
-import 'package:ibmc_blood_metabograms/home/home.dart';
-import 'package:ibmc_blood_metabograms/l10n/s.dart';
-import 'package:ibmc_blood_metabograms/uikit/uikit.dart';
+import 'package:kmk_viewer/assets/resources.dart';
+import 'package:kmk_viewer/home/home.dart';
+import 'package:kmk_viewer/l10n/s.dart';
+import 'package:kmk_viewer/uikit/uikit.dart';
 
 /// NavigationShell with [Scaffold] for [HomeScreen]
 class HomeNavigationShell extends StatelessWidget {

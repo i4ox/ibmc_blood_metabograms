@@ -1,4 +1,4 @@
-name: ibmc_blood_metabograms
+name: kmk_viewer
 version: 1.0.0
 description: "Program for analyze blood metabograms by IBMC"
 

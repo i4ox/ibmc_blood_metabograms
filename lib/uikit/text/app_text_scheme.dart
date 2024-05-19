@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/uikit/text/app_text_style.dart';
+import 'package:kmk_viewer/uikit/text/app_text_style.dart';
 
 /// Text style scheme for IBMC app
 class AppTextScheme extends ThemeExtension<AppTextScheme> {

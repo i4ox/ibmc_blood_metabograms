@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibmc_blood_metabograms/service_locator.dart';
+import 'package:kmk_viewer/service_locator.dart';
 import 'package:logger/logger.dart';
 
 /// Extended [BlocObserver] for ibmc application

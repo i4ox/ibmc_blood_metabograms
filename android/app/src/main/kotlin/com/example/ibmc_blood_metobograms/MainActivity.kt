@@ -1,4 +1,4 @@
-package ru.ibmc.ibmc_blood_metabograms
+package ru.ibmc.kmk_viewer
 
 import io.flutter.embedding.android.FlutterActivity
 

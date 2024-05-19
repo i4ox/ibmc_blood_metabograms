@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ibmc_blood_metabograms/config/app_config.dart';
-import 'package:ibmc_blood_metabograms/features/settings/bloc/l10n/l10n_bloc.dart';
-import 'package:ibmc_blood_metabograms/features/settings/bloc/theme/theme_bloc.dart';
-import 'package:ibmc_blood_metabograms/l10n/s.dart';
-import 'package:ibmc_blood_metabograms/service_locator.dart';
-import 'package:ibmc_blood_metabograms/uikit/theme/app_theme_data.dart';
+import 'package:kmk_viewer/config/app_config.dart';
+import 'package:kmk_viewer/features/settings/bloc/l10n/l10n_bloc.dart';
+import 'package:kmk_viewer/features/settings/bloc/theme/theme_bloc.dart';
+import 'package:kmk_viewer/l10n/s.dart';
+import 'package:kmk_viewer/service_locator.dart';
+import 'package:kmk_viewer/uikit/theme/app_theme_data.dart';
 
 /// Builder which build the MaterialApp with router
 class MaterialAppBuilder extends StatelessWidget {

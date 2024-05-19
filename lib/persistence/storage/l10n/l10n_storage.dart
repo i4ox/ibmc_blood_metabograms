@@ -1,5 +1,5 @@
-import 'package:ibmc_blood_metabograms/persistence/storage/l10n/i_l10n_storage.dart';
-import 'package:ibmc_blood_metabograms/service_locator.dart';
+import 'package:kmk_viewer/persistence/storage/l10n/i_l10n_storage.dart';
+import 'package:kmk_viewer/service_locator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Repository for working with saved locales

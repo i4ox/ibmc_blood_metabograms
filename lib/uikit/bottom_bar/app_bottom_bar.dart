@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ibmc_blood_metabograms/uikit/uikit.dart';
-import 'package:ibmc_blood_metabograms/util/extensions/color_filter.dart';
+import 'package:kmk_viewer/uikit/uikit.dart';
+import 'package:kmk_viewer/util/extensions/color_filter.dart';
 import 'package:vector_graphics/vector_graphics_compat.dart';
 
 /// Custom [BottomNavigationBar] widget

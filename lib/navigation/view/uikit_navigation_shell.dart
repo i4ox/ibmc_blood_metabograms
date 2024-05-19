@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ibmc_blood_metabograms/assets/resources.dart';
-import 'package:ibmc_blood_metabograms/uikit/uikit.dart';
+import 'package:kmk_viewer/assets/resources.dart';
+import 'package:kmk_viewer/uikit/uikit.dart';
 
 /// NavigationShell with [Scaffold] for [UiKitScreen]
 class UiKitNavigationShell extends StatelessWidget {

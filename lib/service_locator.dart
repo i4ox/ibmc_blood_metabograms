@@ -1,11 +1,11 @@
 import 'package:get_it/get_it.dart';
-import 'package:ibmc_blood_metabograms/config/app_config.dart';
-import 'package:ibmc_blood_metabograms/config/app_logger_config.dart';
-import 'package:ibmc_blood_metabograms/features/settings/bloc/l10n/l10n_bloc.dart';
-import 'package:ibmc_blood_metabograms/features/settings/bloc/theme/theme_bloc.dart';
-import 'package:ibmc_blood_metabograms/home/home.dart';
-import 'package:ibmc_blood_metabograms/navigation/navigation.dart';
-import 'package:ibmc_blood_metabograms/util/logger/app_logger.dart';
+import 'package:kmk_viewer/config/app_config.dart';
+import 'package:kmk_viewer/config/app_logger_config.dart';
+import 'package:kmk_viewer/features/settings/bloc/l10n/l10n_bloc.dart';
+import 'package:kmk_viewer/features/settings/bloc/theme/theme_bloc.dart';
+import 'package:kmk_viewer/home/home.dart';
+import 'package:kmk_viewer/navigation/navigation.dart';
+import 'package:kmk_viewer/util/logger/app_logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Store the instance for DI

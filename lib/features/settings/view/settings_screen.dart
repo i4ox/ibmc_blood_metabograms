@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ibmc_blood_metabograms/assets/resources.dart';
-import 'package:ibmc_blood_metabograms/config/app_config.dart';
-import 'package:ibmc_blood_metabograms/features/settings/widgets/widgets.dart';
-import 'package:ibmc_blood_metabograms/l10n/s.dart';
-import 'package:ibmc_blood_metabograms/service_locator.dart';
-import 'package:ibmc_blood_metabograms/uikit/buttons/app_button.dart';
-import 'package:ibmc_blood_metabograms/uikit/uikit.dart';
+import 'package:kmk_viewer/assets/resources.dart';
+import 'package:kmk_viewer/config/app_config.dart';
+import 'package:kmk_viewer/features/settings/widgets/widgets.dart';
+import 'package:kmk_viewer/l10n/s.dart';
+import 'package:kmk_viewer/service_locator.dart';
+import 'package:kmk_viewer/uikit/buttons/app_button.dart';
+import 'package:kmk_viewer/uikit/uikit.dart';
 
 /// Settings screen widget
 class SettingsScreen extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibmc_blood_metabograms/app/app.dart';
+import 'package:kmk_viewer/app/app.dart';
 
 part 'app_event.dart';
 part 'app_state.dart';

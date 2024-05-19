@@ -1,4 +1,4 @@
-import 'package:ibmc_blood_metabograms/config/app_logger_config.dart';
+import 'package:kmk_viewer/config/app_logger_config.dart';
 import 'package:logger/logger.dart';
 
 /// Logger for application

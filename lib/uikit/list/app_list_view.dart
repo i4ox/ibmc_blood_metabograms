@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/uikit/list/app_list_divider.dart';
+import 'package:kmk_viewer/uikit/list/app_list_divider.dart';
 
 /// Custom [ListView] for this app
 class AppListView extends StatelessWidget {

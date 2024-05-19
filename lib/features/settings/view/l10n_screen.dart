@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ibmc_blood_metabograms/assets/resources.dart';
-import 'package:ibmc_blood_metabograms/features/settings/bloc/l10n/l10n_bloc.dart';
-import 'package:ibmc_blood_metabograms/l10n/s.dart';
-import 'package:ibmc_blood_metabograms/service_locator.dart';
-import 'package:ibmc_blood_metabograms/uikit/uikit.dart';
+import 'package:kmk_viewer/assets/resources.dart';
+import 'package:kmk_viewer/features/settings/bloc/l10n/l10n_bloc.dart';
+import 'package:kmk_viewer/l10n/s.dart';
+import 'package:kmk_viewer/service_locator.dart';
+import 'package:kmk_viewer/uikit/uikit.dart';
 
 /// Screen which help to change the locale
 class L10nScreen extends StatelessWidget {

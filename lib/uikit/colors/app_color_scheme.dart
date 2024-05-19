@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/uikit/colors/app_color_palette.dart';
+import 'package:kmk_viewer/uikit/colors/app_color_palette.dart';
 
 /// App brand color scheme
 class AppColorScheme extends ThemeExtension<AppColorScheme> {

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibmc_blood_metabograms/config/app_config.dart';
-import 'package:ibmc_blood_metabograms/config/app_logger_config.dart';
-import 'package:ibmc_blood_metabograms/ibmc_blood_metabograms_app.dart';
-import 'package:ibmc_blood_metabograms/service_locator.dart' as di;
+import 'package:kmk_viewer/config/app_config.dart';
+import 'package:kmk_viewer/config/app_logger_config.dart';
+import 'package:kmk_viewer/kmk_viewer_app.dart';
+import 'package:kmk_viewer/service_locator.dart' as di;
 import 'package:flutter/services.dart';
-import 'package:ibmc_blood_metabograms/service_locator.dart';
-import 'package:ibmc_blood_metabograms/util/bloc/app_bloc_observer.dart';
-import 'package:ibmc_blood_metabograms/util/logger/app_log_filter.dart';
+import 'package:kmk_viewer/service_locator.dart';
+import 'package:kmk_viewer/util/bloc/app_bloc_observer.dart';
+import 'package:kmk_viewer/util/logger/app_log_filter.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
 /// Launch the application
@@ -65,7 +65,7 @@ Future<void> _runApp() async {
         // app takes to load its assets, such as files
         child: DefaultAssetBundle(
           bundle: SentryAssetBundle(),
-          child: const IbmcBloodMetabogramsApplication(),
+          child: const KmkViewerApplication(),
         ),
       ),
     ),

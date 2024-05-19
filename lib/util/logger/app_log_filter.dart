@@ -1,5 +1,5 @@
-import 'package:ibmc_blood_metabograms/config/app_config.dart';
-import 'package:ibmc_blood_metabograms/service_locator.dart';
+import 'package:kmk_viewer/config/app_config.dart';
+import 'package:kmk_viewer/service_locator.dart';
 import 'package:logger/logger.dart';
 
 /// Custom [LogFilter] for app

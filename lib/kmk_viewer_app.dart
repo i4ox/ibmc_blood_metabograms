@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/app/app.dart';
+import 'package:kmk_viewer/app/app.dart';
 
 /// Application widget
-class IbmcBloodMetabogramsApplication extends StatelessWidget {
-  const IbmcBloodMetabogramsApplication({
+class KmkViewerApplication extends StatelessWidget {
+  const KmkViewerApplication({
     super.key,
   });
 

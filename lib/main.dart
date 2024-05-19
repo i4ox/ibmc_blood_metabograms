@@ -1,4 +1,4 @@
-import 'package:ibmc_blood_metabograms/runner.dart';
+import 'package:kmk_viewer/runner.dart';
 
 /// Entrypoint
 void main() {

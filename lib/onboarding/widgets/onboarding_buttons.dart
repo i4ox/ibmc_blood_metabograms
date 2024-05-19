@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ibmc_blood_metabograms/assets/resources.dart';
-import 'package:ibmc_blood_metabograms/home/home.dart';
-import 'package:ibmc_blood_metabograms/l10n/s.dart';
-import 'package:ibmc_blood_metabograms/service_locator.dart';
-import 'package:ibmc_blood_metabograms/uikit/colors/app_color_scheme.dart';
-import 'package:ibmc_blood_metabograms/uikit/text/app_text_scheme.dart';
-import 'package:ibmc_blood_metabograms/util/extensions/color_filter.dart';
+import 'package:kmk_viewer/assets/resources.dart';
+import 'package:kmk_viewer/home/home.dart';
+import 'package:kmk_viewer/l10n/s.dart';
+import 'package:kmk_viewer/service_locator.dart';
+import 'package:kmk_viewer/uikit/colors/app_color_scheme.dart';
+import 'package:kmk_viewer/uikit/text/app_text_scheme.dart';
+import 'package:kmk_viewer/util/extensions/color_filter.dart';
 import 'package:vector_graphics/vector_graphics_compat.dart';
 
 /// Widget which build the indicators and buttons for [OnboardingScreen]

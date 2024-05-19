@@ -1,16 +1,16 @@
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ibmc_blood_metabograms/features/analysis/analysis.dart';
-import 'package:ibmc_blood_metabograms/features/dashboard/dashboard.dart';
-import 'package:ibmc_blood_metabograms/features/integrations/integrations.dart';
-import 'package:ibmc_blood_metabograms/features/profiles/profiles.dart';
-import 'package:ibmc_blood_metabograms/features/settings/settings.dart';
-import 'package:ibmc_blood_metabograms/features/settings/view/dev_mode_screen.dart';
-import 'package:ibmc_blood_metabograms/features/settings/view/l10n_screen.dart';
-import 'package:ibmc_blood_metabograms/home/home.dart';
-import 'package:ibmc_blood_metabograms/navigation/navigation.dart';
-import 'package:ibmc_blood_metabograms/onboarding/onboarding.dart';
-import 'package:ibmc_blood_metabograms/uikit/uikit.dart';
+import 'package:kmk_viewer/features/analysis/analysis.dart';
+import 'package:kmk_viewer/features/dashboard/dashboard.dart';
+import 'package:kmk_viewer/features/integrations/integrations.dart';
+import 'package:kmk_viewer/features/profiles/profiles.dart';
+import 'package:kmk_viewer/features/settings/settings.dart';
+import 'package:kmk_viewer/features/settings/view/dev_mode_screen.dart';
+import 'package:kmk_viewer/features/settings/view/l10n_screen.dart';
+import 'package:kmk_viewer/home/home.dart';
+import 'package:kmk_viewer/navigation/navigation.dart';
+import 'package:kmk_viewer/onboarding/onboarding.dart';
+import 'package:kmk_viewer/uikit/uikit.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
 final GlobalKey<NavigatorState> _dashboardNavigatorKey = GlobalKey<NavigatorState>(debugLabel: "dashboard");

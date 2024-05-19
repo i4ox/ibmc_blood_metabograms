@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/uikit/uikit.dart';
+import 'package:kmk_viewer/uikit/uikit.dart';
 
 class AppAlertDialog extends StatelessWidget {
   const AppAlertDialog({

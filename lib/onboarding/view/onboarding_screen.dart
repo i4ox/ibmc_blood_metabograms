@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/onboarding/widgets/widgets.dart';
+import 'package:kmk_viewer/onboarding/widgets/widgets.dart';
 
 /// Onboarding screen widget
 class OnboardingScreen extends StatefulWidget {

@@ -2,8 +2,8 @@ import 'dart:io' show Platform;
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:ibmc_blood_metabograms/home/home.dart';
-import 'package:ibmc_blood_metabograms/persistence/storage/onboarding_shown/onboarding_shown_storage.dart';
+import 'package:kmk_viewer/home/home.dart';
+import 'package:kmk_viewer/persistence/storage/onboarding_shown/onboarding_shown_storage.dart';
 
 part 'home_event.dart';
 part 'home_state.dart';
