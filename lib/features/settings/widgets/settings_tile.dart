@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:ibmc_blood_metabograms/uikit/colors/app_color_scheme.dart';
-import 'package:ibmc_blood_metabograms/util/extensions/color_filter.dart';
+import 'package:ibmc_blood_metabograms/uikit/uikit.dart';
 
 /// Tile of [ListTile] for [SettingsScreen]
 class SettingsTile extends StatelessWidget {
@@ -16,7 +14,7 @@ class SettingsTile extends StatelessWidget {
   /// Icon which should show with this tile
   final String icon;
 
-  /// Title which should show inside this tile 
+  /// Title which should show inside this tile
   final String title;
 
   /// Function which should run when user click on that
@@ -27,13 +25,10 @@ class SettingsTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: SvgPicture.asset(
-        icon,
-        colorFilter: AppColorScheme.light().primary.toColorFilter,
-      ),
-      onTap: () => onClick(),
-      title: Text(title),
+    return AppListTile(
+      icon: icon,
+      onClick: onClick,
+      title: title,
     );
   }
 }

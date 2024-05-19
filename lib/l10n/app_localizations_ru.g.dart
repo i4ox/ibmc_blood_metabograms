@@ -23,6 +23,15 @@ class AppLocalizationsRu extends AppLocalizations {
   String get thirdOnboardingDescription => 'В приложении имеется множество различных функций, от просмотра анализов до генерации научных публикаций при помощи искусственного интелекта на основе собранных анализов';
 
   @override
+  String get next => 'Далее';
+
+  @override
+  String get skip => 'Пропустить';
+
+  @override
+  String get start => 'Начать';
+
+  @override
   String get dashboard => 'Главная';
 
   @override
@@ -38,16 +47,34 @@ class AppLocalizationsRu extends AppLocalizations {
   String get changeLanguage => 'Сменить язык';
 
   @override
-  String get switchLightTheme => 'Изменить тему на темную';
+  String get changeTheme => 'Изменить тему';
 
   @override
-  String get switchDarkTheme => 'Изменить тему на светлую';
+  String get darkTheme => 'Темная тема';
+
+  @override
+  String get lightTheme => 'Светлая тема';
+
+  @override
+  String get systemTheme => 'Как в системе';
 
   @override
   String get devMode => 'Режим разработчика';
 
   @override
   String get uikit => 'UiKit';
+
+  @override
+  String get uikitWidgets => 'UiKit - Виджеты';
+
+  @override
+  String get uikitColors => 'UiKit - Цвета';
+
+  @override
+  String get uikitFonts => 'UiKit - Шрифты';
+
+  @override
+  String get uikitIcons => 'UiKit - Иконки';
 
   @override
   String get inDevelopment => 'В разработке';

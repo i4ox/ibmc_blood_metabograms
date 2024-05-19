@@ -5,6 +5,7 @@ VERSION_SCRIPT := $(SCRIPTS_DIR)/version.sh
 CODEGEN_SCRIPT := $(SCRIPTS_DIR)/build_runner.sh
 INTL_SCRIPT := $(SCRIPTS_DIR)/intl_with_format.sh
 SPIDER_BUILD_SCRIPT := $(SCRIPTS_DIR)/spider_build.sh
+PRECOMPILE_SVG_SCRIPT := $(SCRIPTS_DIR)/precompile_svg.sh
 FORMAT_SCRIPT := $(SCRIPTS_DIR)/format.sh
 
 # Tasks to run each script
@@ -25,6 +26,9 @@ intl_with_format:
 
 spider_build:
 	sh $(SPIDER_BUILD_SCRIPT)
+
+precompile_svg:
+	sh $(PRECOMPILE_SVG_SCRIPT)
 
 format:
 	sh $(FORMAT_SCRIPT)

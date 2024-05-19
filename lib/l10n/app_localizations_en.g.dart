@@ -23,6 +23,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get thirdOnboardingDescription => 'The app has many different features, from viewing analyzes to generating scientific publications using artificial intelligence based on collected analyses';
 
   @override
+  String get next => 'Next';
+
+  @override
+  String get skip => 'Skip';
+
+  @override
+  String get start => 'Start';
+
+  @override
   String get dashboard => 'Dashboard';
 
   @override
@@ -38,16 +47,34 @@ class AppLocalizationsEn extends AppLocalizations {
   String get changeLanguage => 'Change the language';
 
   @override
-  String get switchLightTheme => 'Switch theme to dark';
+  String get changeTheme => 'Change the theme';
 
   @override
-  String get switchDarkTheme => 'Switch theme to light';
+  String get darkTheme => 'Dark theme';
+
+  @override
+  String get lightTheme => 'Light theme';
+
+  @override
+  String get systemTheme => 'System theme';
 
   @override
   String get devMode => 'Developer mode';
 
   @override
   String get uikit => 'UiKit';
+
+  @override
+  String get uikitWidgets => 'UiKit - Widgets';
+
+  @override
+  String get uikitColors => 'UiKit - Colors';
+
+  @override
+  String get uikitFonts => 'UiKit - Fonts';
+
+  @override
+  String get uikitIcons => 'UiKit - Icons';
 
   @override
   String get inDevelopment => 'In development';

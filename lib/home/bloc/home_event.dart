@@ -2,6 +2,8 @@ part of 'home_bloc.dart';
 
 /// Event part of [HomeBloc]
 abstract class HomeEvent extends Equatable {
+  const HomeEvent();
+
   @override
   List<Object?> get props => [];
 }

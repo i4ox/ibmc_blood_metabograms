@@ -3,6 +3,10 @@ import 'package:ibmc_blood_metabograms/onboarding/widgets/widgets.dart';
 
 /// Onboarding screen widget
 class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({
+    super.key,
+  });
+
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
@@ -32,10 +36,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     _currentPage = page;
                   });
                 },
-                children: OnboardingContent.build(context, _numPages),
+                children: List.generate(_numPages, (index) {
+                  return OnboardingContent(
+                    numPages: _numPages,
+                    currentIndex: index,
+                  );
+                }),
               ),
             ),
-            OnboardingIndicators(
+            OnboardingButtons(
               onClick: () {
                 _pageController.nextPage(
                   duration: const Duration(milliseconds: 200),

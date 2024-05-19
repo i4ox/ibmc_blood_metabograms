@@ -129,6 +129,24 @@ abstract class AppLocalizations {
   /// **'The app has many different features, from viewing analyzes to generating scientific publications using artificial intelligence based on collected analyses'**
   String get thirdOnboardingDescription;
 
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @skip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get skip;
+
+  /// No description provided for @start.
+  ///
+  /// In en, this message translates to:
+  /// **'Start'**
+  String get start;
+
   /// No description provided for @dashboard.
   ///
   /// In en, this message translates to:
@@ -159,17 +177,29 @@ abstract class AppLocalizations {
   /// **'Change the language'**
   String get changeLanguage;
 
-  /// No description provided for @switchLightTheme.
+  /// No description provided for @changeTheme.
   ///
   /// In en, this message translates to:
-  /// **'Switch theme to dark'**
-  String get switchLightTheme;
+  /// **'Change the theme'**
+  String get changeTheme;
 
-  /// No description provided for @switchDarkTheme.
+  /// No description provided for @darkTheme.
   ///
   /// In en, this message translates to:
-  /// **'Switch theme to light'**
-  String get switchDarkTheme;
+  /// **'Dark theme'**
+  String get darkTheme;
+
+  /// No description provided for @lightTheme.
+  ///
+  /// In en, this message translates to:
+  /// **'Light theme'**
+  String get lightTheme;
+
+  /// No description provided for @systemTheme.
+  ///
+  /// In en, this message translates to:
+  /// **'System theme'**
+  String get systemTheme;
 
   /// No description provided for @devMode.
   ///
@@ -182,6 +212,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'UiKit'**
   String get uikit;
+
+  /// No description provided for @uikitWidgets.
+  ///
+  /// In en, this message translates to:
+  /// **'UiKit - Widgets'**
+  String get uikitWidgets;
+
+  /// No description provided for @uikitColors.
+  ///
+  /// In en, this message translates to:
+  /// **'UiKit - Colors'**
+  String get uikitColors;
+
+  /// No description provided for @uikitFonts.
+  ///
+  /// In en, this message translates to:
+  /// **'UiKit - Fonts'**
+  String get uikitFonts;
+
+  /// No description provided for @uikitIcons.
+  ///
+  /// In en, this message translates to:
+  /// **'UiKit - Icons'**
+  String get uikitIcons;
 
   /// No description provided for @inDevelopment.
   ///

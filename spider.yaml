@@ -36,3 +36,6 @@ groups:
   - path: assets/icons
     class_name: SvgIcons
     types: [ .svg ]
+  - path: assets/icons
+    class_name: SvgVectors
+    types: [ .vec ]

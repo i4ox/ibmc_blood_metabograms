@@ -34,7 +34,7 @@ Future<void> run() async {
   // Create app config
   final appConfig = AppConfig(
     sentryDsn: "https://a9166578dccc224f1cf81a1f8eb12244@o4507192576311296.ingest.de.sentry.io/4507192577228880",
-    environmentType: "debug",
+    environmentType: "release",
   );
 
   // Use the dependencies injection
@@ -65,7 +65,7 @@ Future<void> _runApp() async {
         // app takes to load its assets, such as files
         child: DefaultAssetBundle(
           bundle: SentryAssetBundle(),
-          child: IbmcBloodMetabogramsApplication(),
+          child: const IbmcBloodMetabogramsApplication(),
         ),
       ),
     ),

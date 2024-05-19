@@ -54,36 +54,63 @@ class AppColorScheme extends ThemeExtension<AppColorScheme> {
   /// Can be uses as an accent color of the loading effect
   final Color shimmer;
 
-  /// Color of text in text field.
-  final Color textField;
+  /// Color of text headlines
+  final Color textHeadline;
 
-  /// Color of label in text field.
-  final Color textFieldLabel;
+  /// Color of text paragraphs
+  final Color textParagraphs;
 
-  /// Color of helper text in text field.
-  final Color textFieldHelper;
+  /// Color of text labels
+  final Color textLabels;
+
+  /// Color of text descriptions
+  final Color textDescriptions;
 
   AppColorScheme.light()
-      : primary = AppColorPalette.purple,
-        onPrimary = AppColorPalette.white,
-        secondary = AppColorPalette.green,
-        onSecondary = AppColorPalette.white,
-        surface = AppColorPalette.white,
-        surfaceSecondary = AppColorPalette.darkerWhite,
-        onSurface = AppColorPalette.black,
-        background = AppColorPalette.white,
-        backgroundSecondary = AppColorPalette.darkerWhite,
-        onBackground = AppColorPalette.black,
-        danger = AppColorPalette.red,
-        dangerSecondary = AppColorPalette.darkerRed,
-        onDanger = AppColorPalette.white,
-        inactive = AppColorPalette.grey,
-        positive = AppColorPalette.green,
-        onPositive = AppColorPalette.white,
-        shimmer = AppColorPalette.grey,
-        textField = AppColorPalette.black,
-        textFieldLabel = AppColorPalette.black,
-        textFieldHelper = AppColorPalette.black.withOpacity(0.5);
+      : primary = AppLightColorPalette.blue,
+        onPrimary = AppLightColorPalette.white,
+        secondary = AppLightColorPalette.green,
+        onSecondary = AppLightColorPalette.white,
+        surface = AppLightColorPalette.white,
+        surfaceSecondary = AppLightColorPalette.darkWhite,
+        onSurface = AppLightColorPalette.black,
+        background = AppLightColorPalette.white,
+        backgroundSecondary = AppLightColorPalette.darkWhite,
+        onBackground = AppLightColorPalette.black,
+        danger = AppLightColorPalette.red,
+        dangerSecondary = AppLightColorPalette.red, // Change
+        onDanger = AppLightColorPalette.white,
+        inactive = AppLightColorPalette.grey,
+        positive = AppLightColorPalette.green,
+        onPositive = AppLightColorPalette.white,
+        shimmer = AppLightColorPalette.grey,
+        textHeadline = AppLightColorPalette.black,
+        textDescriptions = AppLightColorPalette.black,
+        textLabels = AppLightColorPalette.black,
+        textParagraphs = AppLightColorPalette.black;
+
+  AppColorScheme.dark()
+      : primary = AppDarkColorPalette.blue,
+        onPrimary = AppDarkColorPalette.white,
+        secondary = AppDarkColorPalette.green,
+        onSecondary = AppDarkColorPalette.white,
+        surface = AppDarkColorPalette.black,
+        surfaceSecondary = AppDarkColorPalette.lightBlack,
+        onSurface = AppDarkColorPalette.white,
+        background = AppDarkColorPalette.black,
+        backgroundSecondary = AppDarkColorPalette.lightBlack,
+        onBackground = AppDarkColorPalette.white,
+        danger = AppDarkColorPalette.red,
+        dangerSecondary = AppDarkColorPalette.red, // Change
+        onDanger = AppDarkColorPalette.white,
+        inactive = AppDarkColorPalette.grey,
+        positive = AppDarkColorPalette.green,
+        onPositive = AppDarkColorPalette.white,
+        shimmer = AppDarkColorPalette.grey,
+        textHeadline = AppDarkColorPalette.white,
+        textDescriptions = AppDarkColorPalette.white,
+        textLabels = AppDarkColorPalette.white,
+        textParagraphs = AppDarkColorPalette.white;
 
   // ignore: unused_element
   const AppColorScheme._({
@@ -104,9 +131,10 @@ class AppColorScheme extends ThemeExtension<AppColorScheme> {
     required this.onPositive,
     required this.inactive,
     required this.shimmer,
-    required this.textField,
-    required this.textFieldLabel,
-    required this.textFieldHelper,
+    required this.textHeadline,
+    required this.textParagraphs,
+    required this.textLabels,
+    required this.textDescriptions,
   });
 
   @override
@@ -128,9 +156,10 @@ class AppColorScheme extends ThemeExtension<AppColorScheme> {
     Color? onPositive,
     Color? inactive,
     Color? shimmer,
-    Color? textField,
-    Color? textFieldLabel,
-    Color? textFieldHelper,
+    Color? textHeadline,
+    Color? textLabels,
+    Color? textParagraphs,
+    Color? textDescriptions,
   }) {
     return AppColorScheme._(
       primary: primary ?? this.primary,
@@ -150,9 +179,10 @@ class AppColorScheme extends ThemeExtension<AppColorScheme> {
       onPositive: onPositive ?? this.onPositive,
       inactive: inactive ?? this.inactive,
       shimmer: shimmer ?? this.shimmer,
-      textField: textField ?? this.textField,
-      textFieldLabel: textFieldLabel ?? this.textFieldLabel,
-      textFieldHelper: textFieldHelper ?? this.textFieldHelper,
+      textHeadline: textHeadline ?? this.textHeadline,
+      textLabels: textLabels ?? this.textLabels,
+      textParagraphs: textParagraphs ?? this.textParagraphs,
+      textDescriptions: textDescriptions ?? this.textDescriptions,
     );
   }
 
@@ -178,9 +208,10 @@ class AppColorScheme extends ThemeExtension<AppColorScheme> {
       onPositive: Color.lerp(onPositive, other.onPositive, t)!,
       inactive: Color.lerp(inactive, other.inactive, t)!,
       shimmer: Color.lerp(shimmer, other.shimmer, t)!,
-      textField: Color.lerp(textField, other.textField, t)!,
-      textFieldLabel: Color.lerp(textFieldLabel, other.textFieldLabel, t)!,
-      textFieldHelper: Color.lerp(textFieldHelper, other.textFieldHelper, t)!,
+      textHeadline: Color.lerp(textHeadline, other.textHeadline, t)!,
+      textLabels: Color.lerp(textLabels, other.textLabels, t)!,
+      textParagraphs: Color.lerp(textParagraphs, other.textParagraphs, t)!,
+      textDescriptions: Color.lerp(textDescriptions, other.textDescriptions, t)!,
     );
   }
 

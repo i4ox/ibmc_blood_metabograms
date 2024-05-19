@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ibmc_blood_metabograms/assets/resources.dart';
 import 'package:ibmc_blood_metabograms/config/app_config.dart';
+import 'package:ibmc_blood_metabograms/features/settings/widgets/change_theme_alert_dialog.dart';
 import 'package:ibmc_blood_metabograms/features/settings/widgets/widgets.dart';
 import 'package:ibmc_blood_metabograms/l10n/s.dart';
 import 'package:ibmc_blood_metabograms/service_locator.dart';
+import 'package:ibmc_blood_metabograms/uikit/uikit.dart';
 
 /// List which print all settings inside [SettingsScreen]
 class SettingsList extends StatelessWidget {
@@ -22,29 +24,27 @@ class SettingsList extends StatelessWidget {
   List<SettingsTile> _getSettings(BuildContext context) {
     return [
       SettingsTile(
-        icon: SvgIcons.translate,
+        icon: SvgVectors.translateSvg,
         title: S.of(context).changeLanguage,
         onClick: () => getIt<GoRouter>().go("/settings/l10n"),
         isDebug: false,
       ),
       SettingsTile(
-        icon: SvgIcons.theme,
-        title: Theme.of(context).brightness == Brightness.light
-            ? S.of(context).switchLightTheme
-            : S.of(context).switchDarkTheme,
-        onClick: () {},
+        icon: SvgVectors.themeSvg,
+        title: S.of(context).changeTheme,
+        onClick: () => ChangeThemeAlertDialog.show(context),
         isDebug: false,
       ),
       SettingsTile(
-        icon: SvgIcons.devmode,
+        icon: SvgVectors.devmodeSvg,
         title: S.of(context).devMode,
         onClick: () => getIt<GoRouter>().go("/settings/devmode"),
         isDebug: true,
       ),
       SettingsTile(
-        icon: SvgIcons.uikit,
+        icon: SvgVectors.uikitSvg,
         title: S.of(context).uikit,
-        onClick: () {},
+        onClick: () => getIt<GoRouter>().go("/uikit"),
         isDebug: true,
       ),
     ];
@@ -52,12 +52,9 @@ class SettingsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
+    return AppListView(
+      itemBuilder: _createSettingsItem,
       itemCount: _getSettings(context).length,
-      separatorBuilder: (context, index) => Divider(
-        color: Color(0xFF292D32).withOpacity(0.2),
-      ),
-      itemBuilder: (context, index) => _createSettingsItem(context, index),
     );
   }
 }

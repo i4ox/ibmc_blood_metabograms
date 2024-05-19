@@ -5,7 +5,9 @@ import 'package:ibmc_blood_metabograms/home/bloc/home_bloc.dart';
 
 /// Home screen widget
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({
+    super.key,
+  });
 
   @override
   State<StatefulWidget> createState() => _HomeScreenState();

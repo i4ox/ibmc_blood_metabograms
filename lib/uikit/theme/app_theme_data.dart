@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ibmc_blood_metabograms/uikit/colors/app_color_scheme.dart';
-import 'package:ibmc_blood_metabograms/uikit/text/app_text_scheme.dart';
+import 'package:ibmc_blood_metabograms/uikit/uikit.dart';
 
 /// Global theme for app
 abstract class AppThemeData {
-  // TODO: Add the dark theme
   static final _lightColorScheme = AppColorScheme.light();
+  static final _darkColorScheme = AppColorScheme.dark();
   static final _textScheme = AppTextScheme.base();
 
   static final lightTheme = ThemeData(
@@ -29,6 +28,24 @@ abstract class AppThemeData {
       backgroundColor: _lightColorScheme.background,
       selectedItemColor: _lightColorScheme.primary,
       unselectedItemColor: _lightColorScheme.inactive,
+    ),
+  );
+
+  static final darkTheme = ThemeData(
+    extensions: [_darkColorScheme, _textScheme],
+    brightness: Brightness.dark,
+    colorScheme: ColorScheme(
+      brightness: Brightness.dark,
+      primary: _darkColorScheme.primary,
+      onPrimary: _darkColorScheme.onPrimary,
+      secondary: _darkColorScheme.secondary,
+      onSecondary: _darkColorScheme.onSecondary,
+      error: _darkColorScheme.danger,
+      onError: _darkColorScheme.onDanger,
+      background: _darkColorScheme.background,
+      onBackground: _darkColorScheme.onBackground,
+      surface: _darkColorScheme.surface,
+      onSurface: _darkColorScheme.onSurface,
     ),
   );
 }

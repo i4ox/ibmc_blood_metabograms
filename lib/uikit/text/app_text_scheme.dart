@@ -5,42 +5,41 @@ import 'package:ibmc_blood_metabograms/uikit/text/app_text_style.dart';
 class AppTextScheme extends ThemeExtension<AppTextScheme> {
   /// Text style with a size of 45/52.
   /// Use for short, important text or numerals.
-  final TextStyle display;
+  final TextStyle headline;
 
   /// Text style with a size of 28/36.
   /// Use for marking primary passages of text or important regions of content.
-  final TextStyle headline;
+  final TextStyle text;
 
   /// Text style with a size of 12/16.
   /// Use for things like the text inside components or for very small text in the content body.
   final TextStyle label;
 
   const AppTextScheme._({
-    required this.display,
     required this.headline,
+    required this.text,
     required this.label,
   });
 
-  /// Base app text theme.
   AppTextScheme.base()
-      : display = AppTextStyle.displayMedium.value,
-        headline = AppTextStyle.headlineMedium.value,
-        label = AppTextStyle.labelMedium.value;
+      : headline = AppTextStyle.baseHeadline.value,
+        text = AppTextStyle.baseText.value,
+        label = AppTextStyle.baseLabel.value;
 
   AppTextScheme.onboarding()
-      : display = AppTextStyle.displaySmall.value,
-        headline = AppTextStyle.headlineSmall.value,
-        label = AppTextStyle.labelLarge.value;
+      : headline = AppTextStyle.onboardingHeadline.value,
+        text = AppTextStyle.onboardingText.value,
+        label = AppTextStyle.onboardingLabel.value;
 
   @override
   ThemeExtension<AppTextScheme> copyWith({
-    TextStyle? display,
     TextStyle? headline,
+    TextStyle? text,
     TextStyle? label,
   }) {
     return AppTextScheme._(
-      display: display ?? this.display,
       headline: headline ?? this.headline,
+      text: text ?? this.text,
       label: label ?? this.label,
     );
   }
@@ -52,8 +51,8 @@ class AppTextScheme extends ThemeExtension<AppTextScheme> {
     }
 
     return AppTextScheme._(
-      display: TextStyle.lerp(display, other.display, t)!,
       headline: TextStyle.lerp(headline, other.headline, t)!,
+      text: TextStyle.lerp(text, other.text, t)!,
       label: TextStyle.lerp(label, other.label, t)!,
     );
   }

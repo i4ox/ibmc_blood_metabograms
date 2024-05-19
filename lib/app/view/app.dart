@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ibmc_blood_metabograms/app/app.dart';
 import 'package:ibmc_blood_metabograms/app/widget/widget.dart';
 import 'package:ibmc_blood_metabograms/features/settings/bloc/l10n/l10n_bloc.dart';
+import 'package:ibmc_blood_metabograms/features/settings/bloc/theme/theme_bloc.dart';
 import 'package:ibmc_blood_metabograms/home/home.dart';
 import 'package:ibmc_blood_metabograms/service_locator.dart';
 
@@ -26,6 +27,9 @@ class _AppState extends State<App> {
         ),
         BlocProvider<L10nBloc>(
           create: (context) => getIt<L10nBloc>()..add(LoadSavedL10n()),
+        ),
+        BlocProvider<ThemeBloc>(
+          create: (context) => getIt<ThemeBloc>()..add(LoadSavedTheme()),
         ),
       ],
       child: const MaterialAppBuilder(),

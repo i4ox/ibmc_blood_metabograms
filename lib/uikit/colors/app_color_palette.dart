@@ -1,31 +1,35 @@
 import 'package:flutter/material.dart';
 
 /// Application light colors palette
-abstract class AppColorPalette {
-  static Color purple = Color(0xFF9086F9);
+abstract class AppLightColorPalette {
+  static const white = const Color(0xFFFFFFFF);
 
-  static Color darkerPurple = Color(0xFF7A6EFE);
+  static const darkWhite = const Color(0xFFE1E1E1);
 
-  static Color white = Color(0xFFFFFFFF);
+  static const black = const Color(0xFF212325);
 
-  static Color darkerWhite = Color(0xFFE5E5E5);
+  static const grey = const Color(0xFF6C7278);
 
-  static Color black = Color(0xFF111111);
+  static const blue = const Color(0xFF246BFD);
 
-  static Color lighterBlack = Color(0xFF555D63);
+  static const red = const Color(0xFFFF968E);
 
-  static Color red = Color(0xFFCE2C60);
-
-  static Color darkerRed = Color(0xFFB1205C);
-
-  static Color yellow = Color(0xFFFFD66B);
-
-  static Color darkerYellow = Color(0xFFDBB04E);
-
-  static Color green = Color(0xFF1C8C6E);
-
-  static Color grey = Color(0xFFCECECE);
+  static const green = const Color(0xFF5DCD9B);
 }
 
 /// Application dark colors palette
-abstract class DarkIbmcColorPalette {}
+abstract class AppDarkColorPalette {
+  static const black = const Color(0xFF212325);
+
+  static const lightBlack = const Color(0xFF3A3D46);
+
+  static const white = const Color(0xFFFFFFFF);
+
+  static const grey = const Color(0xFF6C7278);
+
+  static const blue = const Color(0xFF246BFD);
+
+  static const red = const Color(0xFFFF968E);
+
+  static const green = const Color(0xFF5DCD9B);
+}

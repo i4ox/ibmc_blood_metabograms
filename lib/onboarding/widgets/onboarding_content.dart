@@ -1,106 +1,97 @@
 import 'package:flutter/material.dart';
+import 'package:ibmc_blood_metabograms/assets/resources.dart';
 import 'package:ibmc_blood_metabograms/l10n/s.dart';
-import 'package:ibmc_blood_metabograms/uikit/colors/app_color_scheme.dart';
-import 'package:ibmc_blood_metabograms/uikit/text/app_text_scheme.dart';
+import 'package:ibmc_blood_metabograms/uikit/uikit.dart';
 
 /// Widget which build the content for [OnboardingScreen]
-class OnboardingContent {
-  static const List<Image> _containersImages = [
-    Image(
-      image: AssetImage('assets/images/onboarding_1.png'),
-      height: 415,
-      width: 415,
-    ),
-    Image(
-      image: AssetImage('assets/images/onboarding_2.png'),
-      height: 415,
-      width: 415,
-    ),
-    Image(
-      image: AssetImage('assets/images/onboarding_3.png'),
-      height: 415,
-      width: 415,
-    ),
-  ];
+class OnboardingContent extends StatelessWidget {
+  const OnboardingContent({
+    super.key,
+    required this.numPages,
+    required this.currentIndex,
+  });
 
-  /// Custom build method for [OnboardingContent] widget
-  static List<Widget> build(BuildContext context, int numPages) {
-    return List.generate(numPages, (index) {
-      return Container(
-        child: Stack(
-          alignment: AlignmentDirectional.center,
-          children: <Widget>[
-            Positioned(
-              top: 0,
-              left: 0,
-              right: 0,
-              child: Center(
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    left: 20.0,
-                    right: 20.0,
-                  ),
-                  child: _containersImages[index],
+  final int numPages;
+
+  final int currentIndex;
+
+  @override
+  Widget build(BuildContext context) {
+    final _containersImages = _generateImages(context);
+    return Container(
+      child: Stack(
+        alignment: AlignmentDirectional.center,
+        children: <Widget>[
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: Padding(
+                padding: EdgeInsets.only(
+                  left: 20.0,
+                  right: 20.0,
                 ),
+                child: _containersImages[currentIndex],
               ),
             ),
-            Positioned(
-              left: 0,
-              right: 0,
-              bottom: 0,
-              top: MediaQuery.of(context).size.height * 0.48,
-              child: Container(
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      offset: Offset(0, -2),
-                      blurRadius: 10,
-                    ),
-                  ],
-                  color: AppColorScheme.light().surface,
-                  borderRadius: BorderRadiusDirectional.only(
-                    topStart: Radius.circular(20),
-                    topEnd: Radius.circular(20),
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+            top: MediaQuery.of(context).size.height * 0.48,
+            child: Container(
+              padding: const EdgeInsets.only(
+                top: 20.0,
+                left: 20.0,
+                right: 20.0,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    _getOnboardingTitle(context, currentIndex),
+                    textAlign: TextAlign.center,
+                    style: AppTextScheme.onboarding().headline,
                   ),
-                ),
-                child: Container(
-                  padding: const EdgeInsets.only(
-                    top: 20.0,
-                    left: 5.0,
-                    right: 5.0,
+                  const SizedBox(height: 50.0),
+                  Text(
+                    _getOnboardingDescription(context, currentIndex),
+                    textAlign: TextAlign.start,
+                    style: AppTextScheme.onboarding().text,
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        _getOnboardingTitle(context, index),
-                        textAlign: TextAlign.center,
-                        style: AppTextScheme.onboarding().headline.copyWith(
-                              fontFamily: "PlusJakartaSans",
-                              fontWeight: FontWeight.w600,
-                            ),
-                      ),
-                      const SizedBox(height: 30.0),
-                      Text(
-                        _getOnboardingDescription(context, index),
-                        textAlign: TextAlign.center,
-                        style: AppTextScheme.onboarding().label.copyWith(
-                              height: 2,
-                              fontSize: 16,
-                              fontFamily: "PlusJakartaSans",
-                              color: AppColorScheme.light().textFieldLabel,
-                            ),
-                      ),
-                    ],
-                  ),
-                ),
+                ],
               ),
             ),
-          ],
-        ),
-      );
-    });
+          ),
+        ],
+      ),
+    );
+  }
+
+  static List<Image> _generateImages(BuildContext context) {
+    final _color = AppColorScheme.of(context).primary;
+    return [
+      Image(
+        image: AssetImage(Images.onboarding1),
+        height: 415,
+        width: 415,
+        color: _color,
+      ),
+      Image(
+        image: AssetImage(Images.onboarding2),
+        height: 415,
+        width: 415,
+        color: _color,
+      ),
+      Image(
+        image: AssetImage(Images.onboarding3),
+        height: 415,
+        width: 415,
+        color: _color,
+      ),
+    ];
   }
 }
 
