@@ -147,11 +147,11 @@ abstract class AppLocalizations {
   /// **'Dashboard'**
   String get dashboard;
 
-  /// No description provided for @analysis.
+  /// No description provided for @questionnaire.
   ///
   /// In en, this message translates to:
-  /// **'Analysis'**
-  String get analysis;
+  /// **'Questionnaire'**
+  String get questionnaire;
 
   /// No description provided for @profiles.
   ///
@@ -200,6 +200,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'System theme'**
   String get systemTheme;
+
+  /// No description provided for @loginToYourAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Login to your account'**
+  String get loginToYourAccount;
+
+  /// No description provided for @login.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get login;
+
+  /// No description provided for @createAnAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Create an account'**
+  String get createAnAccount;
+
+  /// No description provided for @signup.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up'**
+  String get signup;
+
+  /// No description provided for @enterTheEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the email'**
+  String get enterTheEmail;
+
+  /// No description provided for @enterThePassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the password'**
+  String get enterThePassword;
 
   /// No description provided for @devMode.
   ///

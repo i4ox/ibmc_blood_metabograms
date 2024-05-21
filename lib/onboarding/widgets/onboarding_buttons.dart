@@ -73,8 +73,8 @@ class OnboardingButtons extends StatelessWidget {
                     child: Text(
                       S.of(context).start,
                       style: AppTextScheme.onboarding().label.copyWith(
-                        color: AppColorScheme.of(context).onPrimary,
-                      ),
+                            color: AppColorScheme.of(context).onPrimary,
+                          ),
                     ),
                   ),
           ],

@@ -17,5 +17,8 @@ class HomeOnboarding extends HomeState {}
 /// State of [HomeScreen] when updates onboarding shown
 class HomeUpdatesOnboarding extends HomeState {}
 
+/// State of [HomeScreen] when auth shown
+class HomeAuth extends HomeState {}
+
 /// State of [HomeScreen] when main content shown
 class HomeClean extends HomeState {}

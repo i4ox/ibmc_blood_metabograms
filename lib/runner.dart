@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kmk_viewer/config/app_config.dart';
-import 'package:kmk_viewer/config/app_logger_config.dart';
 import 'package:kmk_viewer/kmk_viewer_app.dart';
 import 'package:kmk_viewer/service_locator.dart' as di;
 import 'package:flutter/services.dart';
 import 'package:kmk_viewer/service_locator.dart';
 import 'package:kmk_viewer/util/bloc/app_bloc_observer.dart';
-import 'package:kmk_viewer/util/logger/app_log_filter.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
 /// Launch the application
@@ -20,25 +18,8 @@ Future<void> run() async {
     DeviceOrientation.portraitUp,
   ]);
 
-  // Create logger config
-  final loggerConfig = AppLoggerConfig(
-    colors: true,
-    printTime: true,
-    printEmojis: false,
-    errorMethodCount: 8,
-    methodCount: 2,
-    lineLength: 120,
-    logFilter: AppLogFilter(),
-  );
-
-  // Create app config
-  final appConfig = AppConfig(
-    sentryDsn: "https://a9166578dccc224f1cf81a1f8eb12244@o4507192576311296.ingest.de.sentry.io/4507192577228880",
-    environmentType: "debug", //"release",
-  );
-
   // Use the dependencies injection
-  await di.registerServices(appConfig, loggerConfig);
+  await di.registerServices();
 
   await _runApp();
 }

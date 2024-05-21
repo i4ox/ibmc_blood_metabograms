@@ -52,7 +52,7 @@ enum AppTextStyle {
   authText(
     TextStyle(
       fontFamily: "PlusJakartaSans",
-      fontSize: _double16,
+      fontSize: _double24,
       fontWeight: FontWeight.w600,
       height: 1.4,
     ),
@@ -60,8 +60,8 @@ enum AppTextStyle {
   authLabel(
     TextStyle(
       fontFamily: "PlusJakartaSans",
-      fontSize: _double11,
-      fontWeight: FontWeight.w500,
+      fontSize: _double14,
+      fontWeight: FontWeight.w600,
       height: 1.6,
     ),
   ),

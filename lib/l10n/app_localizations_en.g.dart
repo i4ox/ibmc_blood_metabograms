@@ -32,7 +32,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dashboard => 'Dashboard';
 
   @override
-  String get analysis => 'Analysis';
+  String get questionnaire => 'Questionnaire';
 
   @override
   String get profiles => 'Profiles';
@@ -57,6 +57,24 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get systemTheme => 'System theme';
+
+  @override
+  String get loginToYourAccount => 'Login to your account';
+
+  @override
+  String get login => 'Login';
+
+  @override
+  String get createAnAccount => 'Create an account';
+
+  @override
+  String get signup => 'Sign up';
+
+  @override
+  String get enterTheEmail => 'Enter the email';
+
+  @override
+  String get enterThePassword => 'Enter the password';
 
   @override
   String get devMode => 'Developer mode';

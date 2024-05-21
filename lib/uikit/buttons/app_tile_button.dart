@@ -5,8 +5,8 @@ import 'package:kmk_viewer/util/extensions/color_filter.dart';
 import 'package:vector_graphics/vector_graphics_compat.dart';
 
 /// Custom [Button] for app
-class AppButton extends StatelessWidget {
-  const AppButton({
+class AppTileButton extends StatelessWidget {
+  const AppTileButton({
     super.key,
     required this.text,
     required this.icon,

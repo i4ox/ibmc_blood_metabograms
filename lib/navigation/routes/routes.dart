@@ -1,10 +1,12 @@
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kmk_viewer/features/analysis/analysis.dart';
+import 'package:kmk_viewer/features/auth/auth.dart';
 import 'package:kmk_viewer/features/dashboard/dashboard.dart';
 import 'package:kmk_viewer/features/integrations/integrations.dart';
 import 'package:kmk_viewer/features/profiles/profiles.dart';
 import 'package:kmk_viewer/features/settings/settings.dart';
+import 'package:kmk_viewer/features/settings/view/account_screen.dart';
 import 'package:kmk_viewer/features/settings/view/dev_mode_screen.dart';
 import 'package:kmk_viewer/features/settings/view/l10n_screen.dart';
 import 'package:kmk_viewer/home/home.dart';
@@ -87,6 +89,10 @@ GoRouter createRouter() => GoRouter(
                       path: 'devmode',
                       builder: (context, state) => const DevModeScreen(),
                     ),
+                    GoRoute(
+                      path: 'account',
+                      builder: (context, state) => const AccountScreen(),
+                    ),
                   ],
                 ),
               ],
@@ -153,6 +159,11 @@ GoRouter createRouter() => GoRouter(
               ],
             ),
           ],
+        ),
+        GoRoute(
+          parentNavigatorKey: _rootNavigatorKey,
+          path: "/auth",
+          builder: (context, state) => const AuthScreen(),
         ),
       ],
     );

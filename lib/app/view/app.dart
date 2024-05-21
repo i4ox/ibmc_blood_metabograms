@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kmk_viewer/app/app.dart';
 import 'package:kmk_viewer/app/widget/widget.dart';
+import 'package:kmk_viewer/features/auth/auth.dart';
+import 'package:kmk_viewer/features/auth/bloc/auth_bloc.dart';
 import 'package:kmk_viewer/features/settings/bloc/l10n/l10n_bloc.dart';
 import 'package:kmk_viewer/features/settings/bloc/theme/theme_bloc.dart';
 import 'package:kmk_viewer/home/home.dart';
@@ -30,6 +32,9 @@ class _AppState extends State<App> {
         ),
         BlocProvider<ThemeBloc>(
           create: (context) => getIt<ThemeBloc>()..add(LoadSavedTheme()),
+        ),
+        BlocProvider<AuthBloc>(
+          create: (context) => getIt<AuthBloc>(),
         ),
       ],
       child: const MaterialAppBuilder(),

@@ -17,7 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
-    context.read<HomeBloc>().add(HomeCheckOnboarding());
+    BlocProvider.of<HomeBloc>(context).add(HomeCheckOnboarding());
     super.initState();
   }
 
@@ -28,6 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
       listener: (context, state) {
         if (state is HomeOnboarding) {
           context.go('/onboarding');
+        } else if (state is HomeAuth) {
+          context.go('/auth');
         } else if (state is HomeClean) {
           context.go('/dashboard');
         }

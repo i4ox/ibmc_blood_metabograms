@@ -5,7 +5,6 @@ import 'package:kmk_viewer/config/app_config.dart';
 import 'package:kmk_viewer/features/settings/widgets/widgets.dart';
 import 'package:kmk_viewer/l10n/s.dart';
 import 'package:kmk_viewer/service_locator.dart';
-import 'package:kmk_viewer/uikit/buttons/app_button.dart';
 import 'package:kmk_viewer/uikit/uikit.dart';
 
 /// Settings screen widget
@@ -27,13 +26,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            AppButton(
+            AppTileButton(
               text: S.of(context).changeLanguage,
               icon: SvgVectors.translateSvg,
               onClick: () => getIt<GoRouter>().go("/settings/l10n"),
             ),
             const SizedBox(height: 10),
-            AppButton(
+            AppTileButton(
               text: S.of(context).changeTheme,
               icon: SvgVectors.themeSvg,
               onClick: () => ChangeThemeAlertDialog.show(context),
@@ -42,7 +41,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             getIt<AppConfig>().environmentType == "debug"
                 ? Column(
                     children: [
-                      AppButton(
+                      AppTileButton(
                         text: S.of(context).devMode + " (Debug)",
                         icon: SvgVectors.devmodeSvg,
                         onClick: () => getIt<GoRouter>().go("/settings/devmode"),
@@ -54,7 +53,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             getIt<AppConfig>().environmentType == "debug"
                 ? Column(
                     children: [
-                      AppButton(
+                      AppTileButton(
                         text: S.of(context).uikit + " (Debug)",
                         icon: SvgVectors.uikitSvg,
                         onClick: () => getIt<GoRouter>().go("/uikit"),
@@ -63,6 +62,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ],
                   )
                 : Container(),
+            AppTileButton(
+              text: "Управление аккаунтом",
+              icon: SvgVectors.profilesSvg,
+              onClick: () => getIt<GoRouter>().go("/settings/account"),
+            ),
           ],
         ),
       ),

@@ -7,13 +7,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:ibmc_blood_metobograms/main.dart';
+import 'package:kmk_viewer/kmk_viewer_app.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(const KmkViewerApplication());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

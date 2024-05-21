@@ -31,6 +31,11 @@ class AppTextScheme extends ThemeExtension<AppTextScheme> {
         text = AppTextStyle.onboardingText.value,
         label = AppTextStyle.onboardingLabel.value;
 
+  AppTextScheme.auth()
+      : headline = AppTextStyle.authHeadline.value,
+        text = AppTextStyle.authText.value,
+        label = AppTextStyle.authLabel.value;
+
   @override
   ThemeExtension<AppTextScheme> copyWith({
     TextStyle? headline,

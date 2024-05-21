@@ -43,7 +43,7 @@ class HomeNavigationShell extends StatelessWidget {
         icon: SvgVectors.dashboardSvg,
       ),
       AppBottomBarItem(
-        title: S.of(context).analysis,
+        title: S.of(context).questionnaire,
         icon: SvgVectors.activitySvg,
       ),
       AppBottomBarItem(

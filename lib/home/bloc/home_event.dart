@@ -13,3 +13,7 @@ class HomeCheckOnboarding extends HomeEvent {}
 
 /// Event which say to close the [OnboardingScreen]
 class HomeCloseOnboarding extends HomeEvent {}
+
+class HomeCheckAuth extends HomeEvent {}
+
+class HomeCloseAuth extends HomeEvent {}

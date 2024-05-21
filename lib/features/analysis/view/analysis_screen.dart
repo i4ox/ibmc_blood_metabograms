@@ -16,7 +16,7 @@ class _AnalysisScreenState extends State<AnalysisScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        title: S.of(context).analysis,
+        title: S.of(context).questionnaire,
       ),
       body: Center(child: Text(S.of(context).inDevelopment)),
     );

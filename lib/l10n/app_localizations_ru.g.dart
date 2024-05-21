@@ -32,7 +32,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get dashboard => 'Главная';
 
   @override
-  String get analysis => 'Анализы';
+  String get questionnaire => 'Анкета';
 
   @override
   String get profiles => 'Профили';
@@ -57,6 +57,24 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get systemTheme => 'Как в системе';
+
+  @override
+  String get loginToYourAccount => 'Войдите в аккаунт';
+
+  @override
+  String get login => 'Вход';
+
+  @override
+  String get createAnAccount => 'Создайте аккаунт';
+
+  @override
+  String get signup => 'Регистрация';
+
+  @override
+  String get enterTheEmail => 'Введите почту';
+
+  @override
+  String get enterThePassword => 'Введите пароль';
 
   @override
   String get devMode => 'Режим разработчика';

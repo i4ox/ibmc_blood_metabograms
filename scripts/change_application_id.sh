@@ -8,4 +8,3 @@ for f in $(find lib -name '*.dart'); do
   sed -i 's/ibmc_blood_metabograms/kmk_viewer/g' $f
 done
 unset IFS; set +f
-

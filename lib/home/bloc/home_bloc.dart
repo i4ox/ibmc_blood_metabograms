@@ -13,25 +13,30 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc() : super(HomeInitial()) {
     on<HomeCheckOnboarding>(_checkOnboarding);
     on<HomeCloseOnboarding>(_closeOnboarding);
+    on<HomeCloseAuth>(_closeAuth);
   }
-}
 
-/// Helper function which close the [OnboardingScreen]
-void _closeOnboarding(HomeEvent event, Emitter<HomeState> emit) {
-  emit(HomeClean());
-}
-
-/// Helper function which check should or not show the [OnboardingScreen]
-void _checkOnboarding(HomeEvent event, Emitter<HomeState> emit) {
-  final isOnboardingShown = OnboardingShownStorage();
-  final isMobile = Platform.isIOS || Platform.isAndroid;
-
-  if (isOnboardingShown.getIsOnboardingShown() == false && isMobile) {
-    isOnboardingShown.setIsOnboardingShown(
-      value: true,
-    );
-    emit(HomeOnboarding());
-  } else {
+  Future<void> _closeAuth(HomeCloseAuth event, Emitter<HomeState> emit) async {
     emit(HomeClean());
+  }
+
+  /// Helper function which close the [OnboardingScreen]
+  Future<void> _closeOnboarding(HomeEvent event, Emitter<HomeState> emit) async {
+    emit(HomeAuth());
+  }
+
+  /// Helper function which check should or not show the [OnboardingScreen]
+  Future<void> _checkOnboarding(HomeEvent event, Emitter<HomeState> emit) async {
+    final isOnboardingShown = OnboardingShownStorage();
+    final isMobile = Platform.isIOS || Platform.isAndroid;
+
+    if (isOnboardingShown.getIsOnboardingShown() == false && isMobile) {
+      isOnboardingShown.setIsOnboardingShown(
+        value: true,
+      );
+      emit(HomeOnboarding());
+    } else {
+      emit(HomeAuth());
+    }
   }
 }
